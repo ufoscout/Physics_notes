@@ -6,7 +6,7 @@
 #
 # info: it requires inotify-tools
 
-inotifywait -m -r -q --event close_write,create,modify,delete,moved_to,delete_self --format '%f' ./tex | 
+inotifywait -m -r -q --event close_write,create,modify,delete,moved_to,delete_self --format '%f' . | 
 while read FILE
 do
   extension=${FILE: -4}

@@ -4,7 +4,7 @@
 #
 # info: it requires texlive-full
 
-filename=./tex/main.tex
+filename=./main.tex
 output_directory=./output
 
 mkdir -p $output_directory

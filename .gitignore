@@ -219,5 +219,9 @@ TSWLatexianTemp*
 # expex forward references with \gathertags
 *-tags.tex
 
-#output folder
+#other folders
 /output/*
+.vscode/*
+
+*.pdf
+*.dvi
