@@ -1,0 +1,42 @@
+\documentclass[../formulario.tex]{subfiles}
+    
+\begin{document}
+
+\chapter{Probability and statistics}
+
+\section{Binomial coefficients}
+\begin{multicols}{3}
+	
+	\[ \binom{n}{k} = \frac{n!}{k!(n-k)!} \]
+	
+	\[ \binom{n}{k} = \binom{n}{n-k} \]
+	
+	\[ \binom{n}{k} + \binom{n}{k-1} = \binom{n+1}{k} \]
+	
+	\[ (a+b)^n = \sum_{k=0}^{n}\binom{n}{k}a^kb^{n-k} \]
+	
+	\[ \sum_{k=0}^{n}\binom{n}{k} = 2^n \]
+	
+	\[ \sum_{k=0}^{n}\sum_{h=0}^{k}\binom{n}{k}\binom{k}{h} = 3^n \]
+	
+	\[ \sum_{k=0}^{n}\sum_{h=0}^{k}\sum_{i=0}^{h}\binom{n}{k}\binom{k}{h}\binom{h}{i} = 4^n \]
+	
+\end{multicols}
+
+\section{Combinations}
+The number of possible {\it combinations} of $k$ elements from $n$ elements is
+given by
+\[
+{n\choose k}=\frac{n!}{k!(n-k)!}
+\]
+The number of {\it permutations} of $p$ from $n$ is given by
+\[
+\frac{n!}{(n-p)!}=p!{n\choose p}
+\]
+The number of different ways to classify $n_i$ elements in $i$ groups, when
+the total number of elements is $N$, is
+\[
+\frac{N!}{\prod\limits_i n_i!}
+\]
+
+\end{document}

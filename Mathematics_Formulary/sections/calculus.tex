@@ -1,0 +1,66 @@
+\documentclass[../formulario.tex]{subfiles}
+    
+\begin{document}
+
+\chapter{Calculus}
+
+\section{Basics}
+
+Absolute value function: $ \left|x\right| = max\{x,-x\} = \sqrt{x^2} = \begin{cases}
+																		x & \text{if } x\geq0\\
+																		-x & \text{if } x<0
+																	\end{cases} $
+
+Factorial: $ n! = \prod_{k=1}^{n}k  = \begin{cases}
+										a_0 &= 1\\
+										a_{n+1} &= (n+1)a_n \ \forall n \in \mathbb{N}
+										\end{cases} $
+
+\section{Logarithms}
+{\bf Definition}: $a^x=y\Leftrightarrow\log_a(y)=x $. For logarithms with
+base $e$ one writes $\ln(x)$.
+
+{\bf Rules}:
+\begin{multicols}{3}
+
+ $a^{log_a(y)}=y $
+ 
+ $\log_a(a^x)=x$
+ 
+ $\log_a(1)=0$
+ 
+ $\log_a(x^n)=n\log_a(x)$
+
+ $\log_a(b)=\frac{1}{\log_b(a)}$
+ 
+ $\log_a(\frac{1}{x})=-\log_a(x)$
+  
+ $\log_a(c)+\log_a(b)=\log_a(cb)$
+ 
+ $\log_a(c)-\log_a(b)=\log_a(c/b)$.
+ 
+\end{multicols}
+
+
+\section{Series}	
+\begin{multicols}{3}
+	
+\[ \sum_{k=1}^n k = \frac{n(n+1)}{2} \]
+
+\[ \sum_{k=1}^n (2k-1) = n^2 \]
+
+\[ \sum_{k=1}^n k^2 = \frac{n(n+1)(2n+1)}{6} \]
+
+\[ \sum_{k=1}^n k^3 = \frac{n^2(n+1)^2}{4} \]
+
+\[
+\sum_{k=0}^{n}q^k = \begin{cases}
+                         (n+1), & \text{for } q=1\\
+                         \frac{1-q^{(n+1)}}{1-q}, & \text{for } q\neq1
+                    \end{cases}
+\]
+	
+\end{multicols}
+
+
+\end{document}
