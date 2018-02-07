@@ -1,24 +1,57 @@
-\documentclass{report}
+\documentclass[12pt]{report}
     % General document formatting 
-    \usepackage[margin=0.5in]{geometry}
+    \usepackage[margin=1.2in]{geometry}
     \usepackage[parfill]{parskip}
     \usepackage[utf8]{inputenc}
-    \usepackage{subfiles}
-    \usepackage{textgreek}
     \usepackage{multicol}
     \usepackage{amsmath}
     \usepackage{amssymb}
+	\usepackage{hyperref}
+	\usepackage{fancyhdr}
+	
+	\hypersetup{
+		colorlinks=true,
+		linkcolor=blue,
+		urlcolor=red,
+		linktoc=all
+	}
+
+% this adds some space between table rows
+\renewcommand{\arraystretch}{1.5}
+
+\title{
+	{Mathematics Formulary}\\
+	{\large Notes for Physics courses}\\
+%	{\includegraphics{university.jpg}}
+}
+\author{Francesco Cinà}
+\date{Day Month Year}
 
 \begin{document}
-% Put your text here
-Mathematics Formulary
 
-\subfile{sections/calculus}
+\maketitle 
 
-\subfile{sections/geometry}
+% TOC - BEGIN
+	\pagenumbering{Roman}
+	\addcontentsline{toc}{chapter}{Contents}
+	\tableofcontents
+	\cleardoublepage
+% TOC - END
 
-\subfile{sections/probability}
+\pagenumbering{arabic}
 
-\subfile{sections/other}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[EL]{\nouppercase\leftmark}
+\fancyhead[OR]{\nouppercase\rightmark}
+\fancyhead[ER,OL]{\thepage}
+
+\input{sections/calculus}
+
+\input{sections/geometry}
+
+\input{sections/probability}
+
+\input{sections/other}
 
 \end{document} 
