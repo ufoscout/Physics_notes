@@ -1,6 +1,14 @@
 \chapter{Geometry}
+Geometry (from the Ancient Greek: geo- "earth", -metron "measurement") is a branch of mathematics concerned with questions of shape, size, relative position of figures, and the properties of space.
 
-\section{Point, Lines}
+
+
+
+
+
+
+\section{Plane Geometry}
+\subsection{Point, Lines}
 Distance between two points $P=(x_1,y_1)$ and $Q=(x_2,y_2)$ in $\mathbb{R}^2$ : $ \overline{PQ} = \sqrt{(x_1-x_2)^2+(y_1-y_2)^2} $
 
 Midpoint between P and Q: $\left(\frac{x_1+x_2}{2},\frac{y_1+y_2}{2}\right)$
@@ -11,42 +19,64 @@ Line equation given two points P and Q: $ y-y_1 = \frac{y_2-y_1}{x_2-x_1}(x-x_1)
 
 Distance of one point P from the line r with equation $ax+by+c=0$ : $ d(U,r) = \frac{\left|ax_1+by_1+c\right|}{\sqrt{a^2+b^2}}$
 
-\section{Trigonometry}
+
+
+
+
+
+
+\section{Trigoniometry}
+\textbf{Definition:} Trigonometry (from Greek trigonon, "triangle" and metron, "measure") is a branch of mathematics that studies relationships involving lengths and angles of triangles.
+
+\subsection{Goniometric functions}
+\textbf{Definition:} In mathematics, the goniometric functions (also called circular functions, angle functions or trigonometric functions) are functions of an angle. They relate the angles of a triangle to the lengths of its sides. 
 
 For the goniometric ratios for a point $p$ on the unit circle holds:
 \[
-\cos(\phi)=x_p~~,~~\sin(\phi)=y_p~~,~~\tan(\phi)=\frac{\sin(\phi)}{\cos(\phi)}
+\cos(\phi)=x_p~~,~~\sin(\phi)=y_p~~,~~\tan(\phi)=\frac{\sin(\phi)}{\cos(\phi)}~~,~~\cot(\phi)=\frac{\cos(\phi)}{\sin(\phi)}
 \]
 
+Pythagorean formula:
 \[
-\sin^2(x)+\cos^2(x)=1 \ \ , \ \ \cos^{-2}(x)=1+\tan^2(x)
+\sin^2(x)+\cos^2(x)=1 
 \]
 
+Identities in terms of their complements:
 \[
-\cos(\frac{\pi}{2}-x)=\sin(x) \ \ , \ \ \sin(\frac{\pi}{2}-x)=\cos(x)
-\]
-\[
-\cos(\frac{\pi}{2}+x)=-\sin(x) \ \ , \ \ \sin(\frac{\pi}{2}+x)=\cos(x)
-\]
-\[
-\cos(\pi+x)=-\cos(x) \ \ , \ \ \sin(\pi+x)=-\sin(x)
-\]
-\[
-\cos(\pi-x)=-\cos(x) \ \ , \ \ \sin(\pi-x)=\sin(x)
+\sin(x)=\cos(\frac{\pi}{2}-x) \ \ , \ \ \cos(x)=\sin(\frac{\pi}{2}-x)
 \]
 
+Periodicity of trig functions:
 \[
-\cos(a-b)=\cos(a)\cos(b)+\sin(a)\sin(b)
+\sin(x+2\pi)=\sin(x) \ , \ \cos(x+2\pi)=\cos(x) \ , \ \tan(x+\pi)=\tan(x)
+\]
+
+Identities for negative angles:
+\[
+\sin(-x) = -\sin(x) \ , \ \cos(-x) = \cos(x) \ , \ \tan(-x) = -\tan(x)
+\]
+
+Identities in terms of their supplements:
+\[
+\sin(\pi-x)=\sin(x) \ \ , \ \ \cos(\pi-x)=-\cos(x) \ , \ \tan(\pi-x) = -\tan(x)
+\]
+
+Ptolemy's identities:
+
+\[
+\sin(a+b)=\sin(a)\cos(b)+\cos(a)\sin(b)
 \]
 \[
 \cos(a+b)=\cos(a)\cos(b)-\sin(a)\sin(b)
 \]
 \[
-\sin(a+b)=\sin(a)\cos(b)+\cos(a)\sin(b)
-\]
-\[
 \sin(a-b)=\sin(a)\cos(b)-\cos(a)\sin(b)
 \]
 \[
-\tan(a\pm b)=\frac{\tan(a)\pm\tan(b)}{1\mp\tan(a)\tan(b)}
+\cos(a-b)=\cos(a)\cos(b)+\sin(a)\sin(b)
+\]
+
+Double angle formulas:
+\[
+\sin(2x) = 2\sin(x)\cos(x) \ , \ \cos(2x)=\cos^2(x)-\sin^2(x) = 2\cos^2(x)-1 = 1 - 2\sin^2(x)
 \]

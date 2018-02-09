@@ -9,6 +9,10 @@
 	
 	\[ \binom{n}{k} + \binom{n}{k-1} = \binom{n+1}{k} \]
 	
+	\[ \binom{n}{0} = \binom{n}{n} = 1 \]
+	
+	\[ \binom{n}{1} = \binom{n}{n-1} = n \]
+	
 	\[ (a+b)^n = \sum_{k=0}^{n}\binom{n}{k}a^kb^{n-k} \]
 	
 	\[ \sum_{k=0}^{n}\binom{n}{k} = 2^n \]
@@ -19,16 +23,36 @@
 	
 \end{multicols}
 
-\section{Combinations}
-The number of possible {\it combinations} of $k$ elements from $n$ elements is
-given by
-\[
-{n\choose k}=\frac{n!}{k!(n-k)!}
-\]
+\section{Permutations}
+\textbf{Permutation}: set of ordered things (e.g. $(1,2,3)\ne(3,2,1)$).
+Example of permutation: "How many ways can we award a 1st, 2nd and 3rd place prize among eight contestants?"
+
+The number of {\it permutations} of $n$ elements is given by $$n!$$
+
 The number of {\it permutations} of $p$ from $n$ is given by
 \[
 \frac{n!}{(n-p)!}=p!{n\choose p}
 \]
+
+The number of {\it permutations} of $p$ from $n$ with repetition is given by
+\[
+n^p
+\]
+
+\section{Combinations}
+\textbf{Combination}: set of things whose order is not important (e.g. $(1,2,3)=(3,2,1)$).
+Example of combination: "How many ways can I give 3 tin cans to 8 people?"
+
+The number of possible {\it combinations} of $k$ elements from $n$ elements is given by
+\[
+{n\choose k}=\frac{n!}{k!(n-k)!}
+\]
+
+The number of possible {\it combinations} of $k$ elements from $n$ elements with repetition is given by
+\[
+{n+(k-1)\choose k}={n+(k-1)\choose n-1}=\frac{(n+(k-1))!}{k!(n-1)!}
+\]
+
 The number of different ways to classify $n_i$ elements in $i$ groups, when
 the total number of elements is $N$, is
 \[
