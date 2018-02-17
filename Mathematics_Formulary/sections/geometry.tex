@@ -21,10 +21,6 @@ Distance of one point P from the line r with equation $ax+by+c=0$ : $ d(U,r) = \
 
 
 
-
-
-
-
 \section{Trigoniometry}
 \textbf{Definition:} Trigonometry (from Greek trigonon, "triangle" and metron, "measure") is a branch of mathematics that studies relationships involving lengths and angles of triangles.
 
@@ -33,36 +29,66 @@ Distance of one point P from the line r with equation $ax+by+c=0$ : $ d(U,r) = \
 
 For the goniometric ratios for a point $p$ on the unit circle holds:
 \[
-\cos(\phi)=x_p~~,~~\sin(\phi)=y_p~~,~~\tan(\phi)=\frac{\sin(\phi)}{\cos(\phi)}~~,~~\cot(\phi)=\frac{\cos(\phi)}{\sin(\phi)}
+\sin(\phi)=y_p~~,~~\cos(\phi)=x_p~~,~~\tan(\phi)=\frac{\sin(\phi)}{\cos(\phi)}
 \]
 
-Pythagorean formula:
+The reciprocal functions secant (sec), cosecant (csc), and cotangent (cot) are the reciprocals of the cosine, sine, and tangent:
 \[
-\sin^2(x)+\cos^2(x)=1 
+\sec(\phi)=\frac{1}{\sin{\phi}}~~,\csc(\phi)=\frac{1}{\cos{\phi}}~~,~~\cot(\phi)=\frac{1}{\tan(\phi)}=\frac{\cos(\phi)}{\sin(\phi)}
 \]
 
-Identities in terms of their complements:
+\subsubsection{Inverse goniometric functions}
+\begin{tabular}{  | c || c | c | c | c | c | c | }
+	\hline
+	Function   &  $\sin$  &  $\cos$  &  $\tan$  &  $\sec$ &  $\csc$ &  $\cot$ \\
+	\hline
+	Inverse   &  $\arcsin$  &  $\arccos$  &  $\arctan$  &  arcsec  &  arccsc  &  arccot \\
+	\hline	
+\end{tabular}
+
+
+\subsubsection{Pythagorean trigonometric identity}
 \[
-\sin(x)=\cos(\frac{\pi}{2}-x) \ \ , \ \ \cos(x)=\sin(\frac{\pi}{2}-x)
+\sin^2(\phi)+\cos^2(\phi)=1 
 \]
 
-Periodicity of trig functions:
+
+\subsubsection{Identities in terms of their complements and supplements}
 \[
-\sin(x+2\pi)=\sin(x) \ , \ \cos(x+2\pi)=\cos(x) \ , \ \tan(x+\pi)=\tan(x)
+\sin\left(\frac{\pi}{2}-\phi\right)=\cos(\phi) \ \ , \ \ \cos\left(\frac{\pi}{2}-\phi\right)=\sin(\phi)
 \]
-
-Identities for negative angles:
 \[
-\sin(-x) = -\sin(x) \ , \ \cos(-x) = \cos(x) \ , \ \tan(-x) = -\tan(x)
+\sin\left(\frac{\pi}{2}+\phi\right)=\cos(\phi) \ \ , \ \ \cos\left(\frac{\pi}{2}+\phi\right)=-\sin(\phi)
 \]
 
-Identities in terms of their supplements:
 \[
-\sin(\pi-x)=\sin(x) \ \ , \ \ \cos(\pi-x)=-\cos(x) \ , \ \tan(\pi-x) = -\tan(x)
+\sin(\pi-\phi)=\sin(\phi) \ \ , \ \ \cos(\pi-\phi)=-\cos(\phi)
+\]
+\[
+\sin(\pi+\phi)=-\sin(\phi) \ \ , \ \ \cos(\pi+\phi)=-\cos(\phi)
 \]
 
-Ptolemy's identities:
+\[
+\sin\left(\frac{3}{2}\pi-\phi\right)=-\cos(\phi) \ \ , \ \ \cos\left(\frac{3}{2}\pi-\phi\right)=-\sin(\phi)
+\]
+\[
+\sin\left(\frac{3}{2}\pi+\phi\right)=-\cos(\phi) \ \ , \ \ \cos\left(\frac{3}{2}\pi+\phi\right)=\sin(\phi)
+\]
 
+
+\subsubsection{Identities for negative angles}
+\[
+\sin(-\phi) = -\sin(\phi) \ , \ \cos(-\phi) = \cos(\phi)
+\]
+
+
+\subsubsection{Periodicity of trig functions}
+\[
+\sin(\phi+2\pi)=\sin(\phi) \ , \ \cos(\phi+2\pi)=\cos(\phi) \ , \ \tan(\phi+\pi)=\tan(\phi)
+\]
+
+
+\subsubsection{Ptolemy's identities}
 \[
 \sin(a+b)=\sin(a)\cos(b)+\cos(a)\sin(b)
 \]
@@ -76,9 +102,69 @@ Ptolemy's identities:
 \cos(a-b)=\cos(a)\cos(b)+\sin(a)\sin(b)
 \]
 
-Double angle formulas:
 \[
-\sin(2x) = 2\sin(x)\cos(x) \ , \ \cos(2x)=\cos^2(x)-\sin^2(x) = 2\cos^2(x)-1 = 1 - 2\sin^2(x)
+\tan(\alpha+\beta)=\frac{\tan(\alpha) + \tan(\beta)}{1-\tan(\alpha)\tan(\beta)} \text{ where } \alpha, \beta, \alpha+\beta \ne \frac{\pi}{2} + k\pi, \ k \in \mathbb{Z}
+\]
+\[
+\tan(\alpha-\beta)=\frac{\tan(\alpha) - \tan(\beta)}{1+\tan(\alpha)\tan(\beta)} \text{ where } \alpha, \beta, \alpha-\beta \ne \frac{\pi}{2} + k\pi, \ k \in \mathbb{Z}
+\]
+
+\subsubsection{Double angle formulas}
+\[
+\sin(2\alpha) = 2\sin(\alpha)\cos(\alpha)
+\]
+\[
+\cos(2\alpha)=\cos^2(\alpha)-\sin^2(\alpha) = 2\cos^2(\alpha)-1 = 1 - 2\sin^2(\alpha)
+\]
+\[
+\tan(2\alpha) = \frac{2\tan(\alpha)}{1-2\tan^2(\alpha)} \text{ where } \alpha \ne \frac{\pi}{4}+k\frac{\pi}{2} \ \wedge \ \alpha \ne \frac{\pi}{2}+k\pi, \ k \in \mathbb{Z}
+\]
+
+\subsubsection{Half angle formulas}
+\[
+\sin^2\left(\frac{\alpha}{2}\right) = \frac{1-\cos(\alpha)}{2}
+\]
+\[
+\cos^2\left(\frac{\alpha}{2}\right) = \frac{1+\cos(\alpha)}{2}
+\]
+\[
+\tan\left(\frac{\alpha}{2}\right) = \frac{\sin(\alpha)}{1+\cos(\alpha)}
+\]
+
+\subsubsection{Product-to-sum identities}
+\[
+2\sin(\alpha)\sin(\beta) = \cos(\alpha-\beta) - \cos(\alpha+\beta)
+\]
+\[
+2\cos(\alpha)\cos(\beta) = \cos(\alpha-\beta) + \cos(\alpha+\beta)
+\]
+\[
+2\sin(\alpha)\cos(\beta) = \sin(\alpha-\beta) + \sin(\alpha+\beta)
+\]
+
+\subsubsection{Sum-to-product identities}
+\[
+\sin(\alpha)+\sin(\beta) = 2\sin\left(\frac{\alpha+\beta}{2}\right)\cos\left(\frac{\alpha-\beta}{2}\right)
+\]
+\[
+\sin(\alpha)-\sin(\beta) = 2\cos\left(\frac{\alpha+\beta}{2}\right)\sin\left(\frac{\alpha-\beta}{2}\right)
+\]
+\[
+\cos(\alpha)+\cos(\beta) = 2\cos\left(\frac{\alpha+\beta}{2}\right)\cos\left(\frac{\alpha-\beta}{2}\right)
+\]
+\[
+\cos(\alpha)-\cos(\beta) = -2\sin\left(\frac{\alpha+\beta}{2}\right)\sin\left(\frac{\alpha-\beta}{2}\right)
+\]
+
+\subsubsection{Tangent half-angle substitution}
+\[
+\sin(\alpha) = \frac{2t}{1+t^2} \text{ where } t=\tan\left(\frac{\alpha}{2}\right) \text{ and } \alpha \ne \pi + 2k\pi
+\]
+\[
+\cos(\alpha) = \frac{1-t^2}{1+t^2} \text{ where } t=\tan\left(\frac{\alpha}{2}\right) \text{ and } \alpha \ne \pi + 2k\pi
+\]
+\[
+\tan(\alpha) = \frac{2t}{1-t^2} \text{ where } t=\tan\left(\frac{\alpha}{2}\right) \text{ and } \alpha \ne \frac{\pi}{2} + k\pi \ \wedge \ \alpha \ne \pi + 2k\pi
 \]
 
 \subsection{Conversions of common angles}
