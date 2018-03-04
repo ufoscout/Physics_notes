@@ -1,9 +1,6 @@
-\chapter{Linear Algebra TODO}
+\chapter{Linear Algebra}
 \textbf{Definition:} Linear algebra is the branch of mathematics concerning linear equations and their representations through matrices and vector spaces. Linear algebra is central to almost all areas of mathematics.
 
-
-\chapter{Linear algebra}
-\typeout{Linear algebra}
 \section{Vector spaces}
 $\cal G$ is a group for the operation $\otimes$ if:
 \begin{enumerate}
@@ -18,22 +15,22 @@ $\cal G$ is a group for the operation $\otimes$ if:
 \end{enumerate}
 If\\
 \hspace*{4.5mm}5. $a\otimes b=b\otimes a$
-\npar
+
 the group is called {\it Abelian} or {\it commutative}.
 Vector spaces form an Abelian group for addition and multiplication:
 $1\cdot\vec{a}=\vec{a}$, $\lambda(\mu\vec{a})=(\lambda\mu)\vec{a}$,
 $(\lambda+\mu)(\vec{a}+\vec{b})=\lambda\vec{a}+\lambda\vec{b}+\mu\vec{a}+\mu\vec{b}$.
-\npar
+
 $W$ is a {\it linear subspace} if $\forall \vec{w}_1,\vec{w}_2\in W$
 holds: $\lambda\vec{w}_1+\mu\vec{w}_2\in W$.
-\npar
+
 $W$ is an {\it invariant subspace} of $V$ for the operator $A$ if
 $\forall\vec{w}\in W$ holds: $A\vec{w}\in W$.
 
 \section{Basis}
 For an orthogonal basis holds: $(\vec{e}_i,\vec{e}_j)=c\delta_{ij}$. For an
 orthonormal basis holds:  $(\vec{e}_i,\vec{e}_j)=\delta_{ij}$.
-\npar
+
 The set vectors $\{\vec{a}_n\}$ is linear independent if:
 \[
 \sum\limits_i\lambda_i\vec{a}_i=0~~\Leftrightarrow~~\forall_i\lambda_i=0
@@ -49,19 +46,19 @@ with $^r$ the row index and $^k$ the column index:
 A^{r_1k_1}\cdot B^{r_2k_2}=C^{r_1k_2}~~,~~(AB)_{ij}=\sum_ka_{ik}b_{kj}
 \]
 where $^r$ is the number of rows and $^k$ the number of columns.
-\npar
+
 The {\it transpose} of $A$ is defined by: $a_{ij}^T=a_{ji}$.
 For this holds $(AB)^T=B^TA^T$ and $(A^T)^{-1}=(A^{-1})^T$. For the
 {\it inverse matrix} holds: $(A\cdot B)^{-1}=B^{-1}\cdot A^{-1}$. The inverse
-matrix $A^{-1}$ has the property that $A\cdot A^{-1}=\II$ and can be found by
-diagonalization: $(A_{ij}|\II)\sim(\II|A_{ij}^{-1})$.
-\npar
+matrix $A^{-1}$ has the property that $A\cdot A^{-1}= \mathbb{I}$ and can be found by
+diagonalization: $(A_{ij}| \mathbb{I})\sim( \mathbb{I}|A_{ij}^{-1})$.
+
 The inverse of a $2\times2$ matrix is:
 \[
 \left(\begin{array}{cc}a&b\\ c&d\end{array}\right)^{-1}=\frac{1}{ad-bc}
 \left(\begin{array}{cc}d&-b\\ -c&a\end{array}\right)
 \]
-\npar
+
 The {\it determinant function} $D=\det(A)$ is defined by:
 \[
 \det(A)=D(\vec{a}_{*1},\vec{a}_{*2},...,\vec{a}_{*n})
@@ -83,12 +80,12 @@ D(\vec{a}_1,\frac{d\vec{a}_2}{dt},...,\vec{a}_n)+...+D(\vec{a}_1,...,\frac{d\vec
 When the rows of a matrix are considered as vectors the {\it row rank} of a
 matrix is the number of independent vectors in this set. Similar for the
 {\it column rank}. The row rank equals the column rank for each matrix.
-\npar
+
 Let $\tilde{A}:\tilde{V}\rightarrow\tilde{V}$ be the complex extension of the
 real linear operator $A:V\rightarrow V$ in a finite dimensional $V$.
 Then $A$ and $\tilde{A}$ have the same caracteristic equation.
-\npar
-When $A_{ij}\in\RR$ and $\vec{v}_1+i\vec{v_2}$ is an eigenvector of $A$
+
+When $A_{ij}\in \mathbb{R}$ and $\vec{v}_1+i\vec{v_2}$ is an eigenvector of $A$
 at eigenvalue $\lambda=\lambda_1+i\lambda_2$, than holds:
 \begin{enumerate}
 	\item $A\vec{v}_1=\lambda_1\vec{v}_1-\lambda_2\vec{v}_2$ and $A\vec{v}_2=\lambda_2\vec{v}_1+\lambda_1\vec{v}_2$.
@@ -101,7 +98,7 @@ given by:
 R(A)=<A\vec{e}_1,...,A\vec{e}_n>=<\vec{k}_1,...,\vec{k}_n>
 \]
 If the columns $\vec{k}_n$ of a $n\times m$ matrix $A$ are independent, than
-the nullspace ${\cal N}(A)=\{\vvec{0}\}$.
+the nullspace ${\cal N}(A)=\{\vec{0}\}$.
 
 \subsection{Matrix equations}
 We start with the equation
@@ -110,14 +107,14 @@ A\cdot\vec{x}=\vec{b}
 \]
 and $\vec{b}\neq\vec{0}$. If $\det(A)=0$ the only solution is $\vec{0}$. If
 $\det(A)\neq0$ there exists exactly one solution $\neq\vec{0}$.
-\npar
+
 The equation
 \[
 A\cdot\vec{x}=\vec{0}
 \]
 has exactly one solution $\neq\vec{0}$ if $\det(A)=0$, and if
 $\det(A)\neq0$ the solution is $\vec{0}$.
-\npar
+
 Cramer's rule for the solution of systems of linear equations is: let the
 system be written as
 \[
@@ -130,8 +127,8 @@ x_j=\frac{D(\vec{a}_1,...,\vec{a}_{j-1},\vec{b},\vec{a}_{j+1},...,\vec{a}_n)}{\d
 
 \section{Linear transformations}
 A transformation $A$ is linear if:
-$A(\lambda\vec{x}+\beta\vvec{y})=\lambda A\vec{x}+\beta A\vec{y}$.
-\npar
+$A(\lambda\vec{x}+\beta\vec{y})=\lambda A\vec{x}+\beta A\vec{y}$.
+
 Some common linear transformations are:
 \begin{center}
 	\begin{tabular}{||p{7cm}|p{6cm}||}
@@ -139,27 +136,27 @@ Some common linear transformations are:
 		\bf Transformation type&\bf Equation\\
 		\hline
 		\hline
-		Projection on the line $<\vec{a}>$             &$P(\vvec{x})=(\vec{a},\vvec{x})\vec{a}/(\vec{a},\vvec{a})$\\
-		Projection on the plane $(\vec{a},\vvec{x})=0$ &$Q(\vvec{x})=\vec{x}-P(\vvec{x})$\\
-		Mirror image in the line $<\vec{a}>$             &$S(\vvec{x})=2P(\vvec{x})-\vec{x}$\\
-		Mirror image in the plane $(\vec{a},\vvec{x})=0$&$T(\vvec{x})=2Q(\vvec{x})-\vec{x}=\vec{x}-2P(\vvec{x})$\\
+		Projection on the line $<\vec{a}>$             &$P(\vec{x})=(\vec{a},\vec{x})\vec{a}/(\vec{a},\vec{a})$\\
+		Projection on the plane $(\vec{a},\vec{x})=0$ &$Q(\vec{x})=\vec{x}-P(\vec{x})$\\
+		Mirror image in the line $<\vec{a}>$             &$S(\vec{x})=2P(\vec{x})-\vec{x}$\\
+		Mirror image in the plane $(\vec{a},\vec{x})=0$&$T(\vec{x})=2Q(\vec{x})-\vec{x}=\vec{x}-2P(\vec{x})$\\
 		\hline
 	\end{tabular}
 \end{center}
-For a projection holds: $\vec{x}-P_W(\vvec{x})\perp P_W(\vvec{x})$ and
-$P_W(\vvec{x})\in W$.
-\npar
-If for a transformation $A$ holds: $(A\vec{x},\vvec{y})=(\vec{x},A\vvec{y})=(A\vec{x},A\vvec{y})$,
+For a projection holds: $\vec{x}-P_W(\vec{x})\perp P_W(\vec{x})$ and
+$P_W(\vec{x})\in W$.
+
+If for a transformation $A$ holds: $(A\vec{x},\vec{y})=(\vec{x},A\vec{y})=(A\vec{x},A\vec{y})$,
 than $A$ is a projection.
-\npar
+
 Let $A:W\rightarrow W$ define a linear transformation; we define:
 \begin{itemize}
 	\item If $S$ is a subset of $V$: $A(S):=\{A\vec{x}\in W|\vec{x}\in S\}$
-	\item If $T$ is a subset of $W$: $A^\leftarrow(T):=\{\vec{x}\in V|A(\vvec{x})\in T\}$
+	\item If $T$ is a subset of $W$: $A^\leftarrow(T):=\{\vec{x}\in V|A(\vec{x})\in T\}$
 \end{itemize}
 Than $A(S)$ is a linear subspace of $W$ and the {\it inverse transformation}
 $A^\leftarrow(T)$ is a linear subspace of $V$. From this follows that $A(V)$ is
-the {\it image space} of $A$, notation: ${\cal R}(A)$. $A^\leftarrow(\vvec{0})=E_0$
+the {\it image space} of $A$, notation: ${\cal R}(A)$. $A^\leftarrow(\vec{0})=E_0$
 is a linear subspace of $V$, the {\it null space} of $A$, notation:
 ${\cal N}(A)$. Then the following holds:
 \[
@@ -169,13 +166,13 @@ ${\cal N}(A)$. Then the following holds:
 \section{Plane and line}
 The equation of a line that contains the points $\vec{a}$ and $\vec{b}$ is:
 \[
-\vec{x}=\vec{a}+\lambda(\vec{b}-\vvec{a})=\vec{a}+\lambda\vec{r}
+\vec{x}=\vec{a}+\lambda(\vec{b}-\vec{a})=\vec{a}+\lambda\vec{r}
 \]
 The equation of a plane is:
 \[
-\vec{x}=\vec{a}+\lambda(\vec{b}-\vvec{a})+\mu(\vec{c}-\vvec{a})=\vec{a}+\lambda\vec{r}_1+\mu\vec{r}_2
+\vec{x}=\vec{a}+\lambda(\vec{b}-\vec{a})+\mu(\vec{c}-\vec{a})=\vec{a}+\lambda\vec{r}_1+\mu\vec{r}_2
 \]
-When this is a plane in $\RR^3$, the {\it normal vector} to this plane is given
+When this is a plane in $ \mathbb{R}^3$, the {\it normal vector} to this plane is given
 by:
 \[
 \vec{n}_V=\frac{\vec{r}_1\times\vec{r}_2}{|\vec{r}_1\times\vec{r}_2|}
@@ -183,45 +180,45 @@ by:
 A line can also be described by the points for which the line equation
 $\ell$: $(\vec{a},\vec{x})+b=0$ holds, and for a plane V: $(\vec{a},\vec{x})+k=0$.
 The normal vector to V is than: $\vec{a}/|\vec{a}|$.
-\npar
+
 The distance $d$ between 2 points $\vec{p}$ and $\vec{q}$ is given by
-$d(\vec{p},\vvec{q})=\|\vec{p}-\vvec{q}\|$.
-\npar
-In $\RR^2$ holds:
-The distance of a point $\vec{p}$ to the line $(\vec{a},\vvec{x})+b=0$ is
+$d(\vec{p},\vec{q})=\|\vec{p}-\vec{q}\|$.
+
+In $ \mathbb{R}^2$ holds:
+The distance of a point $\vec{p}$ to the line $(\vec{a},\vec{x})+b=0$ is
 \[
-d(\vec{p},\ell)=\frac{|(\vec{a},\vvec{p})+b|}{|\vec{a}|}
+d(\vec{p},\ell)=\frac{|(\vec{a},\vec{p})+b|}{|\vec{a}|}
 \]
-Similarly in $\RR^3$:
-The distance of a point $\vec{p}$ to the plane $(\vec{a},\vvec{x})+k=0$ is
+Similarly in $ \mathbb{R}^3$:
+The distance of a point $\vec{p}$ to the plane $(\vec{a},\vec{x})+k=0$ is
 \[
-d(\vec{p},V)=\frac{|(\vec{a},\vvec{p})+k|}{|\vec{a}|}
+d(\vec{p},V)=\frac{|(\vec{a},\vec{p})+k|}{|\vec{a}|}
 \]
-This can be generalized for $\RR^n$ and $\CC^n$ (theorem from Hesse).
+This can be generalized for $ \mathbb{R}^n$ and $\mathbb{C}^n$ (theorem from Hesse).
 
 \section{Coordinate transformations}
-The linear transformation $A$ from $\KK^n\rightarrow\KK^m$ is given by
-($\KK=\RR$ of $\CC$):
+The linear transformation $A$ from $\mathbb{K}^n\rightarrow\mathbb{K}^m$ is given by
+($\mathbb{K}= \mathbb{R}$ of $\mathbb{C}$):
 \[
 \vec{y}=A^{m\times n}\vec{x}
 \]
 where a column of $A$ is the image of a base vector in the original.
-\npar
+
 The matrix $A_\alpha^\beta$ transforms a vector given w.r.t. a basis
 $\alpha$ into a vector w.r.t. a basis $\beta$. It is given by:
 \[
 A_\alpha^\beta=\left(\beta(A\vec{a}_1),...,\beta(A\vec{a}_n)\right)
 \]
-where $\beta(\vvec{x})$ is the representation of the vector $\vec{x}$
+where $\beta(\vec{x})$ is the representation of the vector $\vec{x}$
 w.r.t.\ basis $\beta$.
-\npar
+
 The {\it transformation matrix} $S_\alpha^\beta$ transforms vectors from
 coordinate system $\alpha$ into coordinate system $\beta$:
 \[
-S_\alpha^\beta:=\II_\alpha^\beta=\left(\beta(\vec{a}_1),...,\beta(\vec{a}_n)\right)
+S_\alpha^\beta:= \mathbb{I}_\alpha^\beta=\left(\beta(\vec{a}_1),...,\beta(\vec{a}_n)\right)
 \]
-and $S_\alpha^\beta\cdot S_\beta^\alpha=\II$
-\npar
+and $S_\alpha^\beta\cdot S_\beta^\alpha= \mathbb{I}$
+
 The matrix of a transformation $A$ is than given by:
 \[
 A_\alpha^\beta=\left(A_\alpha^\beta\vec{e}_1,...,A_\alpha^\beta\vec{e}_n\right)
@@ -230,7 +227,7 @@ For the transformation of matrix operators to another coordinate system holds:
 $A_\alpha^\delta=S_\lambda^\delta A_\beta^\lambda S_\alpha^\beta$,
 $A_\alpha^\alpha=S_\beta^\alpha A_\beta^\beta S_\alpha^\beta$ and
 $(AB)_\alpha^\lambda=A_\beta^\lambda B_\alpha^\beta$.
-\npar
+
 Further is $A_\alpha^\beta=S_\alpha^\beta A_\alpha^\alpha$,
 $A_\beta^\alpha=A_\alpha^\alpha S_\beta^\alpha$. A vector is transformed via
 $X_\alpha=S_\alpha^\beta X_\beta$.
@@ -241,11 +238,11 @@ The {\it eigenvalue equation}
 A\vec{x}=\lambda\vec{x}
 \]
 with {\it eigenvalues} $\lambda$ can be solved with
-$(A-\lambda\II)=\vec{0}\Rightarrow\det(A-\lambda\II)=0$. The eigenvalues
+$(A-\lambda \mathbb{I})=\vec{0}\Rightarrow\det(A-\lambda \mathbb{I})=0$. The eigenvalues
 follow from this characteristic equation. The following is true:
 $\det(A)=\prod\limits_i\lambda_i$ and
 ${\rm Tr}(A)=\sum\limits_ia_{ii}=\sum\limits_i\lambda_i$.
-\npar
+ 
 The eigen values $\lambda_i$ are independent of the chosen basis.
 The matrix of $A$ in a basis of eigenvectors, with $S$ the transformation matrix
 to this basis, $S=(E_{\lambda_1},...,E_{\lambda_n})$, is given by:
@@ -253,7 +250,7 @@ to this basis, $S=(E_{\lambda_1},...,E_{\lambda_n})$, is given by:
 \Lambda=S^{-1}AS={\rm diag}(\lambda_1,...,\lambda_n)
 \]
 When 0 is an eigen value of $A$ than $E_0(A)={\cal N}(A)$.
-\npar
+ 
 When $\lambda$ is an eigen value of $A$ holds: $A^n\vec{x}=\lambda^n\vec{x}$.
 
 \section{Transformation types}
@@ -261,21 +258,21 @@ When $\lambda$ is an eigen value of $A$ holds: $A^n\vec{x}=\lambda^n\vec{x}$.
 A transformation is {\it isometric} when: $\|A\vec{x}\|=\|\vec{x}\|$. This
 implies that the eigen values of an isometric transformation are given by
 $\lambda=\exp(i\varphi)\Rightarrow|\lambda|=1$. Than also holds:
-$(A\vec{x},A\vvec{y})=(\vec{x},\vvec{y})$.
-\npar
+$(A\vec{x},A\vec{y})=(\vec{x},\vec{y})$.
+ 
 When $W$ is an invariant subspace if the isometric transformation $A$ with
 dim$(A)<\infty$, than also $W^\perp$ is an invariante subspace.
 
 \subsubsection{Orthogonal transformations}
 A transformation $A$ is {\it orthogonal} if $A$ is isometric {\it and}
 the inverse $A^\leftarrow$ exists. For an orthogonal transformation $O$ holds
-$O^TO=\II$, so: $O^T=O^{-1}$. If $A$ and $B$ are orthogonal, than $AB$ and
+$O^TO= \mathbb{I}$, so: $O^T=O^{-1}$. If $A$ and $B$ are orthogonal, than $AB$ and
 $A^{-1}$ are also orthogonal.
-\npar
+ 
 Let $A:V\rightarrow V$ be orthogonal with dim$(V)<\infty$. Than $A$ is:
-\npar
+ 
 {\bf Direct orthogonal} if $\det(A)=+1$. $A$ describes a rotation.
-A rotation in $\RR^2$ through angle $\varphi$ is given by:
+A rotation in $ \mathbb{R}^2$ through angle $\varphi$ is given by:
 \[
 R=
 \left(\begin{array}{cc}
@@ -288,8 +285,8 @@ with $0\leq\varphi\leq\pi$. Let $\lambda_1$ and $\lambda_2$ be the roots of
 the characteristic equation, than also holds:
 $\Re(\lambda_1)=\Re(\lambda_2)=\cos(\varphi)$, and $\lambda_1=\exp(i\varphi)$,
 $\lambda_2=\exp(-i\varphi)$.
-\npar
-In $\RR^3$ holds: $\lambda_1=1$, $\lambda_2=\lambda_3^*=\exp(i\varphi)$. A
+ 
+In $ \mathbb{R}^3$ holds: $\lambda_1=1$, $\lambda_2=\lambda_3^*=\exp(i\varphi)$. A
 rotation over $E_{\lambda_1}$ is given by the matrix
 \[
 \left(\begin{array}{ccc}
@@ -299,8 +296,8 @@ rotation over $E_{\lambda_1}$ is given by the matrix
 \end{array}\right)
 \]
 {\bf Mirrored orthogonal} if $\det(A)=-1$. Vectors from $E_{-1}$ are mirrored
-by $A$ w.r.t.\ the invariant subspace $E^\perp_{-1}$. A mirroring in $\RR^2$
-in $<(\cos(\half\varphi),\sin(\half\varphi))>$ is given by:
+by $A$ w.r.t.\ the invariant subspace $E^\perp_{-1}$. A mirroring in $ \mathbb{R}^2$
+in $<(\cos(\frac{\varphi}{2}),\sin(\frac{\varphi}{2}))>$ is given by:
 \[
 S=
 \left(\begin{array}{cc}
@@ -308,7 +305,7 @@ S=
 \sin(\varphi)&-\cos(\varphi)
 \end{array}\right)
 \]
-Mirrored orthogonal transformations in $\RR^3$ are rotational mirrorings:
+Mirrored orthogonal transformations in $ \mathbb{R}^3$ are rotational mirrorings:
 rotations of axis $<\vec{a}_1>$ through angle $\varphi$ and mirror plane
 $<\vec{a}_1>^\perp$. The matrix of such a transformation is given by:
 \[
@@ -318,19 +315,19 @@ $<\vec{a}_1>^\perp$. The matrix of such a transformation is given by:
 0&\sin(\varphi)&\cos(\varphi)
 \end{array}\right)
 \]
-For all orthogonal transformations $O$ in $\RR^3$ holds that
-$O(\vvec{x})\times O(\vvec{y})=O(\vec{x}\times\vvec{y})$.
-\npar
-$\RR^n$ $(n<\infty)$ can be decomposed in invariant subspaces with dimension
+For all orthogonal transformations $O$ in $ \mathbb{R}^3$ holds that
+$O(\vec{x})\times O(\vec{y})=O(\vec{x}\times\vec{y})$.
+ 
+$ \mathbb{R}^n$ $(n<\infty)$ can be decomposed in invariant subspaces with dimension
 1 or 2 for each orthogonal transformation.
 
 \subsubsection{Unitary transformations}
 Let $V$ be a complex space on which an inner product is defined. Than a linear
 transformation $U$ is {\it unitary} if $U$ is isometric {\it and} its inverse
 transformation $A^\leftarrow$ exists. A $n\times n$ matrix is unitary if
-$U^HU=\II$. It has determinant $|\det(U)|=1$. Each isometric transformation
+$U^HU= \mathbb{I}$. It has determinant $|\det(U)|=1$. Each isometric transformation
 in a finite-dimensional complex vector space is unitary.
-\npar
+ 
 {\bf Theorem}: for a $n\times n$ matrix $A$ the following statements are
 equivalent:
 \begin{enumerate}
@@ -340,47 +337,47 @@ equivalent:
 \end{enumerate}
 
 \subsubsection{Symmetric transformations}
-A transformation $A$ on $\RR^n$ is {\it symmetric} if
-$(A\vec{x},\vvec{y})=(\vec{x},A\vvec{y})$. A matrix $A\in\MM^{n\times n}$
+A transformation $A$ on $ \mathbb{R}^n$ is {\it symmetric} if
+$(A\vec{x},\vec{y})=(\vec{x},A\vec{y})$. A matrix $A\in\mathbb{M}^{n\times n}$
 is symmetric if $A=A^T$. A linear operator is only symmetric if its matrix
 w.r.t.\ an arbitrary basis is symmetric. All eigenvalues of a symmetric
-transformation belong to $\RR$. The different eigenvectors are mutually
+transformation belong to $ \mathbb{R}$. The different eigenvectors are mutually
 perpendicular. If $A$ is symmetric, than $A^T=A=A^H$ on an orthogonal basis.
-\npar
-For each matrix $B\in\MM^{m\times n}$ holds: $B^TB$ is symmetric.
+ 
+For each matrix $B\in\mathbb{M}^{m\times n}$ holds: $B^TB$ is symmetric.
 
 \subsubsection{Hermitian transformations}
-A transformation $H:V\rightarrow V$ with $V=\CC^n$ is {\it Hermitian} if
-$(H\vec{x},\vvec{y})=(\vec{x},H\vvec{y})$. The {\it Hermitian conjugated}
+A transformation $H:V\rightarrow V$ with $V=\mathbb{C}^n$ is {\it Hermitian} if
+$(H\vec{x},\vec{y})=(\vec{x},H\vec{y})$. The {\it Hermitian conjugated}
 transformation $A^H$ of $A$ is: $[a_{ij}]^H=[a_{ji}^*]$. An alternative
 notation is: $A^H=A^\dagger$. The inner product of two vectors $\vec{x}$ and
-$\vec{y}$ can now be written in the form: $(\vec{x},\vvec{y})=\vec{x}^H\vec{y}$.
-\npar
+$\vec{y}$ can now be written in the form: $(\vec{x},\vec{y})=\vec{x}^H\vec{y}$.
+ 
 If the transformations $A$ and $B$ are Hermitian, than their product $AB$ is
 Hermitian if:\\ $[A,B]=AB-BA=0$. $[A,B]$ is called the {\it commutator} of $A$
 and $B$.
-\npar
-The eigenvalues of a Hermitian transformation belong to $\RR$.
-\npar
+ 
+The eigenvalues of a Hermitian transformation belong to $ \mathbb{R}$.
+ 
 A matrix representation can be coupled with a Hermitian operator $L$.
 W.r.t.\ a basis $\vec{e}_i$ it is given by $L_{mn}=(\vec{e}_m,L\vec{e}_n)$.
 
 \subsubsection{Normal transformations}
 For each linear transformation $A$ in a complex vector space $V$ there exists
-exactly one linear transformation $B$ so that $(A\vec{x},\vvec{y})=(\vec{x},B\vvec{y})$.
+exactly one linear transformation $B$ so that $(A\vec{x},\vec{y})=(\vec{x},B\vec{y})$.
 This $B$ is called the {\it adjungated transformation} of $A$. Notation:
 $B=A^*$.  The following holds: $(CD)^*=D^*C^*$. $A^*=A^{-1}$ if $A$ is unitary
 and $A^*=A$ if $A$ is Hermitian.
-\npar
+ 
 {\bf Definition}: the linear transformation $A$ is {\it normal} in a complex
 vector space $V$ if $A^*A=AA^*$. This is only the case if for its matrix $S$
 w.r.t.\ an orthonormal basis holds: $A^\dagger A=AA^\dagger$.
-\npar
+ 
 If $A$ is normal holds:
 \begin{enumerate}
 	\item For all vectors $\vec{x}\in V$ and a normal transformation $A$ holds:
 	\[
-	(A\vec{x},A\vvec{y})=(A^*A\vec{x},\vvec{y})=(AA^*\vec{x},\vvec{y})=(A^*\vec{x},A^*\vvec{y})
+	(A\vec{x},A\vec{y})=(A^*A\vec{x},\vec{y})=(AA^*\vec{x},\vec{y})=(A^*\vec{x},A^*\vec{y})
 	\]
 	\item $\vec{x}$ is an eigenvector of $A$ if and only if $\vec{x}$ is an
 	eigenvector of $A^*$.
@@ -403,36 +400,36 @@ transformation in a complex vector space $V$ with dim$(V)=n$. Than:
 	properties
 	\begin{itemize}
 		\item $P_i\cdot P_j=0$ for $i\neq j$,
-		\item $P_1+...+P_p=\II$,
+		\item $P_1+...+P_p= \mathbb{I}$,
 		\item ${\rm dim}P_1(V)+...+{\rm dim}P_p(V)=n$
 	\end{itemize}
 	and complex numbers $\alpha_1,...,\alpha_p$ so that
 	$A=\alpha_1P_1+...+\alpha_pP_p$.
 	\item If $A$ is unitary than holds $|\alpha_i|=1~\forall i$.
-	\item If $A$ is Hermitian than $\alpha_i\in\RR~\forall i$.
+	\item If $A$ is Hermitian than $\alpha_i\in \mathbb{R}~\forall i$.
 \end{enumerate}
 
 \subsubsection{Complete systems of commuting Hermitian transformations}
 Consider $m$ Hermitian linear transformations $A_i$ in a $n$ dimensional
 complex inner product space $V$. Assume they mutually commute.
-\npar
+ 
 {\bf Lemma}: if $E_\lambda$ is the eigenspace for eigenvalue $\lambda$ from
 $A_1$, than $E_\lambda$ is an invariant subspace of all transformations
 $A_i$. This means that if $\vec{x}\in E_\lambda$, than $A_i\vec{x}\in E_\lambda$.
-\npar
+ 
 {\bf Theorem}. Consider $m$ commuting Hermitian matrices $A_i$. Than there
 exists a unitary matrix $U$ so that all matrices $U^\dagger A_iU$ are diagonal.
 The columns of $U$ are the common eigenvectors of all matrices $A_j$.
-\npar
+ 
 If all eigenvalues of a Hermitian linear transformation in a $n$-dimensional
 complex vector space differ, than the normalized eigenvector is known except
 for a phase factor $\exp(i\alpha)$.
-\npar
+ 
 {\bf Definition}: a commuting set Hermitian transformations is called
 {\it complete} if for each set of two common eigenvectors $\vec{v}_i,\vec{v}_j$
 there exists a transformation $A_k$ so that $\vec{v}_i$ and $\vec{v}_j$ are
 eigenvectors with different eigenvalues of $A_k$.
-\npar
+ 
 Usually a commuting set is taken as small as possible. In quantum physics one
 speaks of commuting observables. The required number of commuting observables
 equals the number of quantum numbers required to characterize a state.
@@ -497,41 +494,41 @@ are described by the following matrices:
 \section{Inner product spaces}
 A complex inner product on a complex vector space is defined as follows:
 \begin{enumerate}
-	\item $(\vec{a},\vvec{b})=\overline{(\vec{b},\vvec{a})}$,
-	\item $(\vec{a},\beta_1\vec{b}_1+\beta_2\vvec{b}_2)=\beta_1(\vec{a},\vvec{b}_1)+\beta_2(\vec{a},\vvec{b}_2)$
-	for all $\vec{a},\vec{b}_1,\vec{b}_2\in V$ and $\beta_1,\beta_2\in\CC$.
-	\item $(\vec{a},\vvec{a})\geq0$ for all $\vec{a}\in V$,
-	$(\vec{a},\vvec{a})=0$ if and only if $\vec{a}=\vec{0}$.
+	\item $(\vec{a},\vec{b})=\overline{(\vec{b},\vec{a})}$,
+	\item $(\vec{a},\beta_1\vec{b}_1+\beta_2\vec{b}_2)=\beta_1(\vec{a},\vec{b}_1)+\beta_2(\vec{a},\vec{b}_2)$
+	for all $\vec{a},\vec{b}_1,\vec{b}_2\in V$ and $\beta_1,\beta_2\in\mathbb{C}$.
+	\item $(\vec{a},\vec{a})\geq0$ for all $\vec{a}\in V$,
+	$(\vec{a},\vec{a})=0$ if and only if $\vec{a}=\vec{0}$.
 \end{enumerate}
-Due to (1) holds: $(\vec{a},\vvec{a})\in\RR$. The {\it inner product space} $\CC^n$ is
+Due to (1) holds: $(\vec{a},\vec{a})\in \mathbb{R}$. The {\it inner product space} $\mathbb{C}^n$ is
 the complex vector space on which a complex inner product is defined by:
 \[
-(\vec{a},\vvec{b})=\sum_{i=1}^na_i^*b_i
+(\vec{a},\vec{b})=\sum_{i=1}^na_i^*b_i
 \]
 For function spaces holds:
 \[
 (f,g)=\int\limits_a^bf^*(t)g(t)dt
 \]
-For each $\vec{a}$ the length $\|\vvec{a}\|$ is defined by:
-$\|\vvec{a}\|=\sqrt{(\vec{a},\vvec{a})}$. The following holds:
-$\|\vvec{a}\|-\|\vvec{b}\|\leq\|\vec{a}+\vvec{b}\|\leq\|\vvec{a}\|+\|\vvec{b}\|$,
+For each $\vec{a}$ the length $\|\vec{a}\|$ is defined by:
+$\|\vec{a}\|=\sqrt{(\vec{a},\vec{a})}$. The following holds:
+$\|\vec{a}\|-\|\vec{b}\|\leq\|\vec{a}+\vec{b}\|\leq\|\vec{a}\|+\|\vec{b}\|$,
 and with $\varphi$ the angle between $\vec{a}$ and $\vec{b}$ holds:
-$(\vec{a},\vvec{b})=\|\vvec{a}\|\cdot\|\vvec{b}\|\cos(\varphi)$.
-\npar
+$(\vec{a},\vec{b})=\|\vec{a}\|\cdot\|\vec{b}\|\cos(\varphi)$.
+ 
 Let $\{\vec{a}_1,...,\vec{a}_n\}$ be a set of vectors in an inner product space
 $V$. Than the {\it Gramian G} of this set is given by: $G_{ij}=(\vec{a}_i,\vec{a}_j)$.
 The set of vectors is independent if and only if $\det(G)=0$.
-\npar
+ 
 A set is {\it orthonormal} if $(\vec{a}_i,\vec{a}_j)=\delta_{ij}$.
 If $\vec{e}_1,\vec{e}_2,...$ form an orthonormal row in an infinite dimensional
 vector space Bessel's inequality holds:
 \[
-\|\vvec{x}\|^2\geq\sum_{i=1}^\infty|(\vec{e}_i,\vvec{x})|^2
+\|\vec{x}\|^2\geq\sum_{i=1}^\infty|(\vec{e}_i,\vec{x})|^2
 \]
 The equal sign holds if and only if
-$\lim\limits_{n\rightarrow\infty}\|\vec{x}_n-\vvec{x}\|=0$.
-\npar
-The inner product space $\ell^2$ is defined in $\CC^\infty$ by:
+$\lim\limits_{n\rightarrow\infty}\|\vec{x}_n-\vec{x}\|=0$.
+ 
+The inner product space $\ell^2$ is defined in $\mathbb{C}^\infty$ by:
 \[
 \ell^2=\left\{\vec{a}=(a_1,a_2,...)~|~\sum_{n=1}^\infty|a_n|^2<\infty\right\}
 \]
@@ -543,13 +540,13 @@ The class LT exists of functions for which holds:
 \begin{enumerate}
 	\item On each interval $[0,A]$, $A>0$ there are no more than a finite number of
 	discontinuities and each discontinuity has an upper - and lower limit,
-	\item $\exists t_0\in[0,\infty>$ and $a,M\in\RR$ so that for $t\geq t_0$
+	\item $\exists t_0\in[0,\infty>$ and $a,M\in \mathbb{R}$ so that for $t\geq t_0$
 	holds: $|f(t)|\exp(-at)<M$.
 \end{enumerate}
 Than there exists a Laplace transform for $f$.
-\npar
+ 
 The Laplace transformation is a generalisation of the Fourier transformation.
-The Laplace transform of a function $f(t)$ is, with $s\in\CC$ and $t\geq0$:
+The Laplace transform of a function $f(t)$ is, with $s\in\mathbb{C}$ and $t\geq0$:
 \[
 F(s)=\int\limits_0^\infty f(t){\rm e}^{-st}dt
 \]
@@ -568,9 +565,9 @@ The operator $\cal L$ has the following properties:
 	$t>a$ and $g(t)=0$ for $t\leq a$, than holds:
 	${\cal L}\left(g(t)\right)={\rm e}^{-sa}{\cal L}(f(t))$.
 \end{enumerate}
-If $s\in\RR$ than holds $\Re(\lambda f)={\cal L}(\Re(f))$ and
+If $s\in \mathbb{R}$ than holds $\Re(\lambda f)={\cal L}(\Re(f))$ and
 $\Im(\lambda f)={\cal L}(\Im(f))$.
-\npar
+ 
 For some often occurring functions holds:
 \begin{center}
 	\begin{tabular}{||c||c||}
@@ -610,29 +607,29 @@ In the $2\times2$ case holds:
 	\item $\lambda_1\neq\lambda_2$: than $\vec{x}(t)=(\vec{u}t+\vec{v})\exp(\lambda t)$.
 \end{enumerate}
 Assume that $\lambda=\alpha+i\beta$ is an eigenvalue with eigenvector $\vec{v}$,
-than $\lambda^*$ is also an eigenvalue for eigenvector $\vvec{v}^*$. Decompose
+than $\lambda^*$ is also an eigenvalue for eigenvector $\vec{v}^*$. Decompose
 $\vec{v}=\vec{u}+i\vec{w}$, than the real solutions are
 \[
 c_1[\vec{u}\cos(\beta t)-\vec{w}\sin(\beta t)]{\rm e}^{\alpha t}+c_2[\vec{v}\cos(\beta t)+\vec{u}\sin(\beta t)]{\rm e}^{\alpha t}
 \]
-\npar
+ 
 There are two solution strategies for the equation $\ddot{\vec{x}}=A\vec{x}$:
 \begin{enumerate}
-	\item Let $\vec{x}=\vec{v}\exp(\lambda t)\Rightarrow\det(A-\lambda^2\II)=0$.
+	\item Let $\vec{x}=\vec{v}\exp(\lambda t)\Rightarrow\det(A-\lambda^2 \mathbb{I})=0$.
 	\item Introduce: $\dot{x}=u$ and $\dot{y}=v$, this leads to $\ddot{x}=\dot{u}$ and
 	$\ddot{y}=\dot{v}$. This transforms a $n$-dimensional set of second order
 	equations into a $2n$-dimensional set of first order equations. 
 \end{enumerate}
 
 \section{Quadratic forms}
-\subsection{Quadratic forms in $\RR^2$}
+\subsection{Quadratic forms in $ \mathbb{R}^2$}
 The general equation of a quadratic form is:
 $\vec{x}^TA\vec{x}+2\vec{x}^TP+S=0$. Here, $A$ is a symmetric matrix.
 If $\Lambda=S^{-1}AS={\rm diag}(\lambda_1,...,\lambda_n)$ holds:
 $\vec{u}^T\Lambda\vec{u}+2\vec{u}^TP+S=0$, so all cross terms are 0.
 $\vec{u}=(u,v,w)$ should be chosen so that det$(S)=+1$,
 to maintain the same orientation as the system $(x,y,z)$.
-\npar
+ 
 Starting with the equation
 \[
 ax^2+2bxy+cy^2+dx+ey+f=0
@@ -644,7 +641,7 @@ r=\frac{ep}{1-e\cos(\theta)}
 \]
 An ellipse has $e<1$, a parabola $e=1$ and a hyperbola $e>1$.
 
-\subsection{Quadratic surfaces in $\RR^3$}
+\subsection{Quadratic surfaces in $ \mathbb{R}^3$}
 Rank 3:
 \[
 p\frac{x^2}{a^2}+q\frac{y^2}{b^2}+r\frac{z^2}{c^2}=d
