@@ -58,6 +58,14 @@ These two branches are related to each other by the fundamental theorem of calcu
 \]
 
 \[
+\lim_{x\rightarrow+\infty}\frac{x^\alpha}{e^x}=0 ~~,~~ \lim_{x\rightarrow-\infty}\frac{e^x}{\left|x\right|^\alpha}=0 ~~~~ a>1
+\]
+\[
+\lim_{x\rightarrow+\infty}\frac{\ln(x)}{x^\alpha}=0 ~~,~~ \lim_{x\rightarrow 0^+}\ln(x)x^\alpha=0 ~~~~ a>0
+\]
+
+
+\[
 \lim_{x\rightarrow0}(1+x)^{1/x}={\rm e}~~,~~
 \lim_{x\rightarrow\infty}\left(1+\frac{n}{x}\right)^x={\rm e}^n
 \]
@@ -73,6 +81,81 @@ These two branches are related to each other by the fundamental theorem of calcu
 \subsubsection{Substitution rule}
 \[
 \text{given  } \lim_{x\rightarrow c}f(x)=l \text{   then   } \lim_{x\rightarrow c}g(f(x))=\lim_{y\rightarrow l}g(y) 
+\]
+
+\section{Series}
+\subsection{Convergence and divergence}
+Absolute Convergence: If $\sum\left|s_n\right|$ is convergent.
+
+Conditional Convergence: If $\sum s_n$ is convergent but not absolutely convergent.
+
+If $\sum\limits_n|u_n|$ converges, $\sum\limits_n u_n$ also converges.
+
+If $\lim\limits_{n\rightarrow\infty}u_n\neq0$ then $\sum\limits_n u_n$ is divergent.
+
+\subsection{Positive Series}
+Positive Series: If all the terms $ s^n $ are positive.
+
+If $u_n>0~\forall n$ then $\sum\limits_n u_n$ is convergent if 
+$\sum\limits_n\ln(u_n+1)$ is convergent.
+
+Integral Test: If $ f(n) = s_n $, continuous, positive, decreasing: $\sum s_n$ converges $ \Leftrightarrow \int_{1}^{\infty}f(x)dx $ converges.
+
+Comparison Test: $\sum a_n$ and $\sum b_n$ where $a_k<b_k ~ (\forall k\ge m) 
+\begin{cases}
+\text{If } \sum b_n \text{ converges, so does } \sum a_n \\
+\text{If } \sum a_n \text{ diverges, so does } \sum b_n
+\end{cases}
+$
+
+Limit Comparison Test: $\sum a_n$ and $\sum b_n$ such that $ \lim_{n\rightarrow\infty} \frac{a_n}{b_n}$ exists, $\sum a_n$ converges $\Leftrightarrow$ $\sum b_n$ converges.
+
+Ratio Test: if $\lim_{n\rightarrow \infty}\left|\frac{s_{n+1}}{s_n}\right| = \begin{cases}
+<1 \text{ then it is absolutely convergent} \\
+1 \text{ then no conclusion} \\
+>1 \text{ or } +\infty \text{ then it diverges}
+\end{cases}
+$
+
+Root Test: if  $\lim_{n\rightarrow \infty} \sqrt[n]{\left|s_n\right|} = \begin{cases}
+<1 \text{ then it is absolutely convergent} \\
+1 \text{ then no conclusion} \\
+>1 \text{ or } +\infty \text{ then it diverges}
+\end{cases}
+$
+
+\subsection{Alternating Series}
+Alternating Series: $ \sum(-1)^{n+1}a_n=a_1-a_2+a_3-a_4+a_5-... $
+
+Leibniz Test: An alternating series of which the absolute values of the terms drop
+monotonously to 0 is convergent.
+
+\subsection{Common Series}
+\subsubsection{Harmonic Series}
+\[
+\sum_{n=1}^\infty \frac{1}{n^p} ~ \begin{cases}
+									\text{is convergent if } p>1 \\
+									\text{is divergent if } p\leq1
+									\end{cases}
+\]
+
+\subsubsection{Geometric Series}
+\[
+\sum_{0}^{n}q^k=1+q+q^2+...+q^n= \begin{cases}
+									n+1 & q=1 \\
+									\frac{1-q^{k+1}}{1-q} & q\ne1
+								 \end{cases}
+~ \text{ then } ~
+\sum_{0}^{+\infty}q^k= \begin{cases}
+\frac{1}{1-q} & \left|q\right|<1 \\
++\infty & q\ge1 \\
+\text{no conclusion} & q\le-1
+\end{cases}
+\]
+
+\subsubsection{Mengoli Series}
+\[
+s_n=\sum_{k=2}^{n}\frac{1}{(k-1)k}=1-\frac{1}{n} ~~ \text{ then } ~~  \lim_{n\rightarrow\infty}s_n=1
 \]
 
 \section{Differential calculus}
