@@ -84,6 +84,8 @@ These two branches are related to each other by the fundamental theorem of calcu
 \]
 
 \section{Series}
+\textbf{Definition:} In mathematics, a series is, roughly speaking, a description of the operation of adding infinitely many quantities, one after the other, to a given starting quantity.
+
 \subsection{Convergence and divergence}
 Absolute Convergence: If $\sum\left|s_n\right|$ is convergent.
 
@@ -131,6 +133,20 @@ Leibniz Test: An alternating series of which the absolute values of the terms dr
 monotonously to 0 is convergent.
 
 \subsection{Common Series}
+\subsubsection{Basic Series}
+
+\begin{multicols}{2}
+	
+	$ \sum_{k=1}^n k = \frac{n(n+1)}{2} $
+	
+	$ \sum_{k=1}^n (2k-1) = n^2 $
+	
+	$ \sum_{k=1}^n k^2 = \frac{n(n+1)(2n+1)}{6} $
+	
+	$ \sum_{k=1}^n k^3 = \frac{n^2(n+1)^2}{4} $
+	
+\end{multicols}
+
 \subsubsection{Harmonic Series}
 \[
 \sum_{n=1}^\infty \frac{1}{n^p} ~ \begin{cases}
@@ -158,40 +174,81 @@ monotonously to 0 is convergent.
 s_n=\sum_{k=2}^{n}\frac{1}{(k-1)k}=1-\frac{1}{n} ~~ \text{ then } ~~  \lim_{n\rightarrow\infty}s_n=1
 \]
 
-\section{Differential calculus}
-\textbf{Definition:} In mathematics, differential calculus is a subfield of calculus concerned with the study of the rates at which quantities change.
+\section{Derivatives}
+The derivative of a function is the ratio of the difference of function value $ f(x) $ at points $ x+\Delta x $ and $ x $ with $ \Delta x $, when $ \Delta x $ is infinitesimally small. The derivative is the function slope or slope of the tangent line at point x.
+
+\[
+f^\prime(x) = \lim_{\Delta x \rightarrow 0} \frac{ f( x + \Delta x ) - f(x) }{\Delta x}
+\]
+
+\subsection{Derivatives rules}
+
+Sum rule: $ (\alpha f(x) \pm \beta g(x) )^\prime = \alpha f^\prime(x) \pm \beta g^\prime(x) $ 
+
+Product rule: $ (f(x) \cdot g(x) )^\prime = f^\prime(x) g(x) + f(x) g^\prime(x)$
+
+Quotient rule: $ \left( \frac{f(x)}{g(x)} \right)^\prime = \frac{ f^\prime(x) g(x) - f(x) g^\prime(x) }{ g^2(x) } $
+
+Chain rule: $ f\left( g(x) \right) ^\prime = f^\prime\left( g(x) \right) \cdot g^\prime(x) $
 
 
 
+\subsection{Second derivative test}
+
+If $ f^\prime(x_0) = 0 $ then $ \begin{cases}
+									f^{\prime\prime}(x_0) > 0 & \text{local minimum} \\
+									f^{\prime\prime}(x_0) < 0 & \text{local maximum} \\
+									f^{\prime\prime}(x_0) = 0 & \text{undetermined}
+								\end{cases}
+$
+
+\subsection{Common derivatives}
+\subsubsection{Basic Derivatives}
+$ f(x)=\alpha ~~ \Rightarrow ~~ f^\prime(x)=0 $
+
+$ f(x)=x ~~ \Rightarrow ~~ f^\prime(x)=1 $
+
+$ f(x)=x^n ~~ \Rightarrow ~~ f^\prime(x)=n x^{n-1} $
+
+\subsubsection{Trigonometric Derivatives}
+$ f(x)=\sin(x) ~~ \Rightarrow ~~ f^\prime(x)=\cos(x) $
+
+$ f(x)=\cos(x) ~~ \Rightarrow ~~ f^\prime(x)=-\sin(x) $
+
+$ f(x)=\tan(x) ~~ \Rightarrow ~~ f^\prime(x)=\sec^2(x)= \frac{1}{\cos^2(x)} $
+
+$ f(x)=\sec(x) ~~ \Rightarrow ~~ f^\prime(x)=\sec(x)\tan(x) $
+
+$ f(x)=\cot(x) ~~ \Rightarrow ~~ f^\prime(x)=-\csc^2(x) $
+
+$ f(x)=\csc(x) ~~ \Rightarrow ~~ f^\prime(x)=-\csc(x)\cot(x) $
+
+$ f(x)=\arcsin(x) ~~ \Rightarrow ~~ f^\prime(x)= \frac{1}{ \sqrt{1-x^2} } $
+
+$ f(x)=\arccos(x) ~~ \Rightarrow ~~ f^\prime(x)= -\frac{1}{ \sqrt{1-x^2} } $
+
+$ f(x)=\arctan(x) ~~ \Rightarrow ~~ f^\prime(x)= \frac{1}{ 1+x^2 } $
+
+\subsubsection{Exponential Derivatives}
+$ f(x)=a^x ~~ \Rightarrow ~~ f^\prime(x)=\ln(a)a^x $
+
+$ f(x)=e^x ~~ \Rightarrow ~~ f^\prime(x)=e^x $
+
+$ f(x)=a^{g(x)} ~~ \Rightarrow ~~ f^\prime(x)=\ln(a)a^{g(x)}g^\prime(x) $
+
+$ f(x)=e^{g(x)} ~~ \Rightarrow ~~ f^\prime(x)=e^{g(x)}g^\prime(x) $
+
+\subsubsection{Logarithm Derivatives}
+\[ f(x)=\log_a(x) ~~ \Rightarrow ~~ f^\prime(x)= \frac{1}{ \ln(a)x } \]
+\[ f(x)=\ln(x) ~~ \Rightarrow ~~ f^\prime(x)= \frac{1}{ x } \]
+\[ f(x)=\log_a(g(x)) ~~ \Rightarrow ~~ f^\prime(x)= \frac{g^\prime(x)}{ \ln(a)g(x) } \]
+\[ f(x)=\ln(g(x)) ~~ \Rightarrow ~~ f^\prime(x)= \frac{g^\prime(x)}{ g(x) } \]
 
 
 \section{Integral Calculus}
 \textbf{Definition:} In mathematics, Integral calculus is a subfield of calculus in which the notion of an integral, its properties and methods of calculation are studied. It concerns accumulation of quantities and the areas under and between curves.
 
 
+\section{Differential calculus}
+\textbf{Definition:} In mathematics, differential calculus is a subfield of calculus concerned with the study of the rates at which quantities change.
 
-
-
-\section{Series}	
-\textbf{Definition:} In mathematics, a series is, roughly speaking, a description of the operation of adding infinitely many quantities, one after the other, to a given starting quantity.
-
-
-
-\begin{multicols}{3}
-	
-$ \sum_{k=1}^n k = \frac{n(n+1)}{2} $
-
-$ \sum_{k=1}^n (2k-1) = n^2 $
-
-$ \sum_{k=1}^n k^2 = \frac{n(n+1)(2n+1)}{6} $
-
-$ \sum_{k=1}^n k^3 = \frac{n^2(n+1)^2}{4} $
-
-$
-\sum_{k=0}^{n}q^k = \begin{cases}
-                         (n+1), & \text{for } q=1\\
-                         \frac{1-q^{(n+1)}}{1-q}, & \text{for } q\neq1
-                    \end{cases}
-$
-	
-\end{multicols}
