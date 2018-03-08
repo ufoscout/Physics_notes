@@ -4,15 +4,20 @@ Geometry (from the Ancient Greek: geo- "earth", -metron "measurement") is a bran
 
 \section{Plane Geometry}
 \subsection{Point, Lines}
-Distance between two points $P=(x_1,y_1)$ and $Q=(x_2,y_2)$ in $\mathbb{R}^2$ : $ \overline{PQ} = \sqrt{(x_1-x_2)^2+(y_1-y_2)^2} $
+Distance between two points $P=(x_1,y_1)$ and $Q=(x_2,y_2)$ in $\mathbb{R}^2$ : 
+\[ \overline{PQ} = \sqrt{(x_1-x_2)^2+(y_1-y_2)^2} \]
 
-Midpoint between P and Q: $\left(\frac{x_1+x_2}{2},\frac{y_1+y_2}{2}\right)$
+Midpoint between P and Q: 
+\[ \left(\frac{x_1+x_2}{2},\frac{y_1+y_2}{2}\right) \]
 
-Lines equation given one point P: $ y-y_1 = m(x-x_1) $
+Lines equation given one point P: 
+\[ y-y_1 = m(x-x_1) \]
 
-Line equation given two points P and Q: $ y-y_1 = \frac{y_2-y_1}{x_2-x_1}(x-x_1) $
+Line equation given two points P and Q: 
+\[ y-y_1 = \frac{y_2-y_1}{x_2-x_1}(x-x_1) \] 
 
-Distance of one point P from the line r with equation $ax+by+c=0$ : $ d(U,r) = \frac{\left|ax_1+by_1+c\right|}{\sqrt{a^2+b^2}}$
+Distance of one point P from the line r with equation $ax+by+c=0$ : 
+\[ d(U,r) = \frac{\left|ax_1+by_1+c\right|}{\sqrt{a^2+b^2}} \]
 
 
 \section{Trigonometry}
@@ -22,14 +27,25 @@ Distance of one point P from the line r with equation $ax+by+c=0$ : $ d(U,r) = \
 \textbf{Definition:} In mathematics, the goniometric functions (also called circular functions, angle functions or trigonometric functions) are functions of an angle. They relate the angles of a triangle to the lengths of its sides. 
 
 For the goniometric ratios for a point $p$ on the unit circle holds:
-\[
-\sin(\phi)=y_p~~,~~\cos(\phi)=x_p~~,~~\tan(\phi)=\frac{\sin(\phi)}{\cos(\phi)}
-\]
+\begin{table}[ht!]
+\centering
+\begin{tabular}{ c | c | c }
+$ \displaystyle \sin(\phi)=y_p $   & 
+$ \displaystyle \cos(\phi)=x_p $   & 
+$ \displaystyle \tan(\phi)=\frac{\sin(\phi)}{\cos(\phi)} $
+\end{tabular}
+\end{table}
 
 The reciprocal functions secant (sec), cosecant (csc), and cotangent (cot) are the reciprocals of the cosine, sine, and tangent:
-\[
-\sec(\phi)=\frac{1}{\sin{\phi}}~~,\csc(\phi)=\frac{1}{\cos{\phi}}~~,~~\cot(\phi)=\frac{1}{\tan(\phi)}=\frac{\cos(\phi)}{\sin(\phi)}
-\]
+
+\begin{table}[ht!]
+	\centering
+	\begin{tabular}{ c | c | c }
+	$ \displaystyle \sec(\phi)=\frac{1}{\sin{\phi}} $  &
+	$ \displaystyle \csc(\phi)=\frac{1}{\cos{\phi}} $  &
+	$ \displaystyle \cot(\phi)=\frac{1}{\tan(\phi)}=\frac{\cos(\phi)}{\sin(\phi)} $
+	\end{tabular}
+\end{table}
 
 \subsubsection{Inverse goniometric functions}
 \begin{tabular}{  | c || c | c | c | c | c | c | }
@@ -104,26 +120,20 @@ The reciprocal functions secant (sec), cosecant (csc), and cotangent (cot) are t
 \]
 
 \subsubsection{Double angle formulas}
-\[
-\sin(2\alpha) = 2\sin(\alpha)\cos(\alpha)
-\]
-\[
-\cos(2\alpha)=\cos^2(\alpha)-\sin^2(\alpha) = 2\cos^2(\alpha)-1 = 1 - 2\sin^2(\alpha)
-\]
-\[
-\tan(2\alpha) = \frac{2\tan(\alpha)}{1-2\tan^2(\alpha)} \text{ where } \alpha \ne \frac{\pi}{4}+k\frac{\pi}{2} \ \wedge \ \alpha \ne \frac{\pi}{2}+k\pi, \ k \in \mathbb{Z}
-\]
+\begin{align*}
+\sin(2\alpha) &= 2\sin(\alpha)\cos(\alpha) \\ 
+\cos(2\alpha) &=\cos^2(\alpha)-\sin^2(\alpha) = 2\cos^2(\alpha)-1 = 1 - 2\sin^2(\alpha) \\
+\tan(2\alpha) &= \frac{2\tan(\alpha)}{1-2\tan^2(\alpha)} \text{ where } \alpha \ne \frac{\pi}{4}+k\frac{\pi}{2} \ \wedge \ \alpha \ne \frac{\pi}{2}+k\pi, \ k \in \mathbb{Z}
+\end{align*}
+
 
 \subsubsection{Half angle formulas}
-\[
-\sin^2\left(\frac{\alpha}{2}\right) = \frac{1-\cos(\alpha)}{2}
-\]
-\[
-\cos^2\left(\frac{\alpha}{2}\right) = \frac{1+\cos(\alpha)}{2}
-\]
-\[
-\tan\left(\frac{\alpha}{2}\right) = \frac{\sin(\alpha)}{1+\cos(\alpha)}
-\]
+\begin{tabularx}{\textwidth}{ X X X }
+$ \displaystyle \sin^2\left(\frac{\alpha}{2}\right) = \frac{1-\cos(\alpha)}{2} $ & 
+$ \displaystyle \cos^2\left(\frac{\alpha}{2}\right) = \frac{1+\cos(\alpha)}{2} $ &
+$  \displaystyle \tan\left(\frac{\alpha}{2}\right) = \frac{\sin(\alpha)}{1+\cos(\alpha)} $
+\end{tabularx}
+
 
 \subsubsection{Product-to-sum identities}
 \[
@@ -151,15 +161,12 @@ The reciprocal functions secant (sec), cosecant (csc), and cotangent (cot) are t
 \]
 
 \subsubsection{Tangent half-angle substitution}
-\[
-\sin(\alpha) = \frac{2t}{1+t^2} \text{ where } t=\tan\left(\frac{\alpha}{2}\right) \text{ and } \alpha \ne \pi + 2k\pi
-\]
-\[
-\cos(\alpha) = \frac{1-t^2}{1+t^2} \text{ where } t=\tan\left(\frac{\alpha}{2}\right) \text{ and } \alpha \ne \pi + 2k\pi
-\]
-\[
-\tan(\alpha) = \frac{2t}{1-t^2} \text{ where } t=\tan\left(\frac{\alpha}{2}\right) \text{ and } \alpha \ne \frac{\pi}{2} + k\pi \ \wedge \ \alpha \ne \pi + 2k\pi
-\]
+$ \displaystyle \sin(\alpha) = \frac{2t}{1+t^2} \text{ where } t=\tan\left(\frac{\alpha}{2}\right) \text{ and } \alpha \ne \pi + 2k\pi $
+
+$ \displaystyle \cos(\alpha) = \frac{1-t^2}{1+t^2} \text{ where } t=\tan\left(\frac{\alpha}{2}\right) \text{ and } \alpha \ne \pi + 2k\pi $
+
+$ \displaystyle \tan(\alpha) = \frac{2t}{1-t^2} \text{ where } t=\tan\left(\frac{\alpha}{2}\right) \text{ and } \alpha \ne \frac{\pi}{2} + k\pi \ \wedge \ \alpha \ne \pi + 2k\pi $
+
 
 \subsection{Conversions of common angles}
 
