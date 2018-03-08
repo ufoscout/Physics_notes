@@ -135,17 +135,12 @@ monotonously to 0 is convergent.
 \subsection{Common Series}
 \subsubsection{Basic Series}
 
-\begin{multicols}{2}
-	
-	$ \sum_{k=1}^n k = \frac{n(n+1)}{2} $
-	
-	$ \sum_{k=1}^n (2k-1) = n^2 $
-	
-	$ \sum_{k=1}^n k^2 = \frac{n(n+1)(2n+1)}{6} $
-	
-	$ \sum_{k=1}^n k^3 = \frac{n^2(n+1)^2}{4} $
-	
-\end{multicols}
+\begin{tabular}{ l l }
+$ \displaystyle \sum_{k=1}^n k = \frac{n(n+1)}{2} $ &
+$ \displaystyle \sum_{k=1}^n (2k-1) = n^2 $ \\ [1.5em]
+$ \displaystyle \sum_{k=1}^n k^2 = \frac{n(n+1)(2n+1)}{6} $ & 
+$ \displaystyle \sum_{k=1}^n k^3 = \frac{n^2(n+1)^2}{4} $
+\end{tabular}
 
 \subsubsection{Harmonic Series}
 \[
@@ -182,15 +177,12 @@ f^\prime(x) = \lim_{\Delta x \rightarrow 0} \frac{ f( x + \Delta x ) - f(x) }{\D
 \]
 
 \subsection{Derivatives rules}
-
-Sum rule: $ (\alpha f(x) \pm \beta g(x) )^\prime = \alpha f^\prime(x) \pm \beta g^\prime(x) $ 
-
-Product rule: $ (f(x) \cdot g(x) )^\prime = f^\prime(x) g(x) + f(x) g^\prime(x)$
-
-Quotient rule: $ \left( \frac{f(x)}{g(x)} \right)^\prime = \frac{ f^\prime(x) g(x) - f(x) g^\prime(x) }{ g^2(x) } $
-
-Chain rule: $ f\left( g(x) \right) ^\prime = f^\prime\left( g(x) \right) \cdot g^\prime(x) $
-
+\begin{tabular}{ l l }
+Sum rule:      & $ \displaystyle (\alpha f(x) \pm \beta g(x) )^\prime = \alpha f^\prime(x) \pm \beta g^\prime(x) $  \\
+Product rule:  & $ \displaystyle (f(x) \cdot g(x) )^\prime = f^\prime(x) g(x) + f(x) g^\prime(x) $ \\
+Quotient rule: & $ \displaystyle \left( \frac{f(x)}{g(x)} \right)^\prime = \frac{ f^\prime(x) g(x) - f(x) g^\prime(x) }{ g^2(x) } $ \\
+Chain rule:    & $ \displaystyle f\left( g(x) \right) ^\prime = f^\prime\left( g(x) \right) \cdot g^\prime(x) $
+\end{tabular}
 
 
 \subsection{Second derivative test}
@@ -204,45 +196,42 @@ $
 
 \subsection{Common derivatives}
 \subsubsection{Basic Derivatives}
-$ f(x)=\alpha ~~ \Rightarrow ~~ f^\prime(x)=0 $
+$ \displaystyle f(x)=\alpha ~ \Rightarrow ~ f^\prime(x)=0 $
 
-$ f(x)=x ~~ \Rightarrow ~~ f^\prime(x)=1 $
+$ \displaystyle f(x)=x ~ \Rightarrow ~ f^\prime(x)=1 $
 
-$ f(x)=x^n ~~ \Rightarrow ~~ f^\prime(x)=n x^{n-1} $
+$ \displaystyle f(x)=x^n ~ \Rightarrow ~ f^\prime(x)=n x^{n-1} $
 
 \subsubsection{Trigonometric Derivatives}
-$ f(x)=\sin(x) ~~ \Rightarrow ~~ f^\prime(x)=\cos(x) $
+\begin{tabular}{ l l }
+$ \displaystyle f(x)=\sin(x) ~ \Rightarrow ~ f^\prime(x)=\cos(x) $ & 
+$ \displaystyle f(x)=\arcsin(x) ~ \Rightarrow ~ f^\prime(x)= \frac{1}{ \sqrt{1-x^2} } $ \\ [2ex]
+$ \displaystyle f(x)=\cos(x) ~ \Rightarrow ~ f^\prime(x)=-\sin(x) $ &
+$ \displaystyle f(x)=\arccos(x) ~ \Rightarrow ~ f^\prime(x)= -\frac{1}{ \sqrt{1-x^2} } $ \\ [2ex]
+$ \displaystyle f(x)=\tan(x) ~ \Rightarrow ~ f^\prime(x)=\sec^2(x)= \frac{1}{\cos^2(x)} $ & 
+$ \displaystyle f(x)=\arctan(x) ~ \Rightarrow ~ f^\prime(x)= \frac{1}{ 1+x^2 } $ \\ [2ex]
+$ \displaystyle f(x)=\sec(x) ~ \Rightarrow ~ f^\prime(x)=\sec(x)\tan(x) $ \\ [2ex]
+$ \displaystyle f(x)=\cot(x) ~ \Rightarrow ~ f^\prime(x)=-\csc^2(x) $ \\ [2ex]
+$ \displaystyle f(x)=\csc(x) ~ \Rightarrow ~ f^\prime(x)=-\csc(x)\cot(x) $
+\end{tabular}
 
-$ f(x)=\cos(x) ~~ \Rightarrow ~~ f^\prime(x)=-\sin(x) $
-
-$ f(x)=\tan(x) ~~ \Rightarrow ~~ f^\prime(x)=\sec^2(x)= \frac{1}{\cos^2(x)} $
-
-$ f(x)=\sec(x) ~~ \Rightarrow ~~ f^\prime(x)=\sec(x)\tan(x) $
-
-$ f(x)=\cot(x) ~~ \Rightarrow ~~ f^\prime(x)=-\csc^2(x) $
-
-$ f(x)=\csc(x) ~~ \Rightarrow ~~ f^\prime(x)=-\csc(x)\cot(x) $
-
-$ f(x)=\arcsin(x) ~~ \Rightarrow ~~ f^\prime(x)= \frac{1}{ \sqrt{1-x^2} } $
-
-$ f(x)=\arccos(x) ~~ \Rightarrow ~~ f^\prime(x)= -\frac{1}{ \sqrt{1-x^2} } $
-
-$ f(x)=\arctan(x) ~~ \Rightarrow ~~ f^\prime(x)= \frac{1}{ 1+x^2 } $
 
 \subsubsection{Exponential Derivatives}
-$ f(x)=a^x ~~ \Rightarrow ~~ f^\prime(x)=\ln(a)a^x $
+\begin{tabular}{ l l }
+$ \displaystyle  f(x)=a^x ~ \Rightarrow ~ f^\prime(x)=\ln(a)a^x $ & 
+$ \displaystyle  f(x)=e^x ~ \Rightarrow ~ f^\prime(x)=e^x $ \\ 
+$ \displaystyle  f(x)=a^{g(x)} ~ \Rightarrow ~ f^\prime(x)=\ln(a)a^{g(x)}g^\prime(x) $ & 
+$ \displaystyle  f(x)=e^{g(x)} ~ \Rightarrow ~ f^\prime(x)=e^{g(x)}g^\prime(x) $ 
+\end{tabular}
 
-$ f(x)=e^x ~~ \Rightarrow ~~ f^\prime(x)=e^x $
-
-$ f(x)=a^{g(x)} ~~ \Rightarrow ~~ f^\prime(x)=\ln(a)a^{g(x)}g^\prime(x) $
-
-$ f(x)=e^{g(x)} ~~ \Rightarrow ~~ f^\prime(x)=e^{g(x)}g^\prime(x) $
 
 \subsubsection{Logarithm Derivatives}
-\[ f(x)=\log_a(x) ~~ \Rightarrow ~~ f^\prime(x)= \frac{1}{ \ln(a)x } \]
-\[ f(x)=\ln(x) ~~ \Rightarrow ~~ f^\prime(x)= \frac{1}{ x } \]
-\[ f(x)=\log_a(g(x)) ~~ \Rightarrow ~~ f^\prime(x)= \frac{g^\prime(x)}{ \ln(a)g(x) } \]
-\[ f(x)=\ln(g(x)) ~~ \Rightarrow ~~ f^\prime(x)= \frac{g^\prime(x)}{ g(x) } \]
+\begin{tabular}{ l l }
+$ \displaystyle  f(x)=\log_a(x) ~ \Rightarrow ~ f^\prime(x)= \frac{1}{ \ln(a)x } $ & 
+$ \displaystyle  f(x)=\ln(x) ~ \Rightarrow ~ f^\prime(x)= \frac{1}{ x } $ \\ [1.5em]
+$ \displaystyle  f(x)=\log_a(g(x)) ~ \Rightarrow ~ f^\prime(x)= \frac{g^\prime(x)}{ \ln(a)g(x) } $ & 
+$ \displaystyle  f(x)=\ln(g(x)) ~ \Rightarrow ~ f^\prime(x)= \frac{g^\prime(x)}{ g(x) } $ 
+\end{tabular}
 
 
 \section{Integral Calculus}
