@@ -9,11 +9,11 @@ These two branches are related to each other by the fundamental theorem of calcu
 
 \section{Limits}
 \subsection{Limits Rules}
-If $ \lim_{x \rightarrow c f(x) = L_1} $ and $ \lim_{x \rightarrow c g(x) = L_2} $ then:
+If $ \lim_{x \rightarrow c }f(x) = L_1 $ and $ \lim_{x \rightarrow c } g(x) = L_2 $ then:
 
 \begin{itemize}
-	\item $ \displaystyle \lim_{x \rightarrow c} \left[ f(x) \pm g(x) \right]f(x) = L_1 \pm L_2 $
-	\item $ \displaystyle \lim_{x \rightarrow c} \left[ f(x) \cdot g(x) \right]f(x) = L_1 \cdot L_2 $
+	\item $ \displaystyle \lim_{x \rightarrow c} \left[ f(x) \pm g(x) \right] = L_1 \pm L_2 $
+	\item $ \displaystyle \lim_{x \rightarrow c} \left[ f(x) \cdot g(x) \right] = L_1 \cdot L_2 $
 	\item $ \displaystyle \lim_{x \rightarrow c} \frac{f(x)}{g(x)} = \frac{L_1}{L_2} $ \ \ \ \  if $L_2 \ne 0$
 	\item $ \displaystyle \lim_{x \rightarrow c} f(x)^n = L_1^n $ \ \ \ \  if $n$ is a positive integer
 	\item $ \displaystyle \lim_{x \rightarrow c} f(x)^{\frac{1}{n}} = L_1^{\frac{1}{n}} $ \ \ \ \  if $n$ is a positive integer, and, if $n$ is even, then $L_1>0$
@@ -27,25 +27,24 @@ $
 
 \subsection{Common Limits}
 \subsubsection{Simple functions}
- $ \displaystyle \lim_{x \rightarrow c} a = a $
 
- $ \displaystyle \lim_{x \rightarrow c} x = c $
-
- $ \displaystyle \lim_{x \rightarrow c} ax + b = ac+b $
-
- $ \displaystyle \lim_{x \rightarrow c} x^r = c^r $ \ \ \ if $r$ is a positive integer
-
- $ \displaystyle \lim_{x \rightarrow c} ax + b = ac+b $ 
-
- $ \displaystyle \lim_{x \rightarrow 0^+} \frac{1}{x^r} = +\infty $
+\begin{tabularx}{\textwidth}{ l l }
+ $ \displaystyle \lim_{x \rightarrow c} a = a $ & 
+ $ \displaystyle \lim_{x \rightarrow c} x = c $ \\
+  $ \displaystyle \lim_{x \rightarrow c} (ax + b) = ac+b $ &
+  $ \displaystyle \lim_{x \rightarrow c} x^r = c^r $ \ \ \ if $r$ is a positive integer \\
+ 
+ $ \displaystyle \lim_{x \rightarrow 0^+} \frac{1}{x^r} = +\infty $ &
  
  $ \displaystyle \lim_{x \rightarrow 0^-} \frac{1}{x^r} = \begin{cases}
-															 -\infty & \text{ if $r$ is odd } \\
-															 +\infty & \text{ if $r$ is even }
-															 \end{cases}
+ -\infty & \text{ if $r$ is odd } \\
+ +\infty & \text{ if $r$ is even }
+ \end{cases}
  $
+\end{tabularx}
 
-\subsubsection{Polynomial Limits}
+
+\subsubsection{Polynomials}
 $ \displaystyle \lim_{x\rightarrow\pm\infty}P(x)=\lim_{x\rightarrow\pm\infty}a_nx^x=\pm\infty $
 
 $ \displaystyle \lim_{x\rightarrow\pm\infty}\frac{P(x)}{Q(x)}=\lim_{x\rightarrow\pm\infty}\frac{a_nx^x}{b_mx^m}=\lim_{x\rightarrow\pm\infty}\frac{a_n}{b_m}x^{n-m}=
@@ -55,79 +54,81 @@ $ \displaystyle \lim_{x\rightarrow\pm\infty}\frac{P(x)}{Q(x)}=\lim_{x\rightarrow
 0 & \text{if } n<m \\
 \end{cases} $
 
-\subsubsection{Trigonometric functions limits}
+\subsubsection{Trigonometric functions}
 \begin{tabular}{ l l }
+
 $ \displaystyle \lim_{x\rightarrow0}\frac{\sin(x)}{x}=1 $ &
+$ \displaystyle \lim_{x\rightarrow0}\frac{\sin(\alpha x)}{\beta x}=\frac{\alpha}{\beta} $ \\ [1.7ex]
+
+$ \displaystyle \lim_{x\rightarrow0}\frac{1-\cos(x)}{x}=0 $ &
 $ \displaystyle \lim_{x\rightarrow0}\frac{1-\cos(x)}{x^2}=\frac{1}{2} $ \\ [1.7ex]
+
 $ \displaystyle \lim_{x\rightarrow0}\frac{\tan(x)}{x}=1 $ &
 $ \displaystyle  \lim_{x\rightarrow0}\frac{\arcsin(x)}{x}=1 $ 
+
 \end{tabular}
 
 \subsubsection{Logarithmic and exponential functions}
 \begin{tabularx}{\textwidth}{ X X }
+	
 $ \displaystyle \lim_{x\rightarrow0}\frac{\ln(x+a)}{x}=a $ &
-$ \displaystyle \lim_{x\rightarrow0}\frac{\log_a(x+1)}{x}=\frac{1}{\ln(a)} ~~ (a>0) $ \\ [1.7ex]
+$ \displaystyle \lim_{x\rightarrow0}\frac{\log_a(x+1)}{x}=\frac{1}{\ln(a)} ~~ (a>0) $ \\ [2ex]
 
-$ \displaystyle \lim_{x\rightarrow+\infty}x^\alpha=+\infty ~~ \alpha>0 $ &
-$ \displaystyle \lim_{x\rightarrow0^+}x^\alpha=0 ~~ \alpha>0 $ \\ [1.7ex]
-
-$ \displaystyle \lim_{x\rightarrow+\infty}x^\alpha=0 \alpha<0 $ & 
-$ \displaystyle \lim_{x\rightarrow0^+}x^\alpha=+\infty ~~ \alpha<0 $ \\ [1.7ex]
+$ \displaystyle \lim_{x\rightarrow+\infty}x^\alpha= \begin{cases}
++\infty & a>0 \\
+0 & a<0
+\end{cases} $ & 
+$ \displaystyle \lim_{x\rightarrow0^+}x^\alpha= \begin{cases}
++\infty & a<0 \\
+0 & a>0
+\end{cases} $ \\ [2.2ex]
 
 $ \displaystyle \lim_{x\rightarrow+\infty}a^x= \begin{cases}
 +\infty & a>1 \\
 0 & a<1
 \end{cases} $ & 
 $ \displaystyle \lim_{x\rightarrow-\infty}a^x= \begin{cases}
-+\infty & a<1 \\
-0 & a>1
-\end{cases} $ \\ [1.7ex]
+0 & a>1 \\
++\infty & a<1 
+\end{cases} $ \\ [2.2ex]
+
+$ \displaystyle \lim_{x\rightarrow+\infty}\log_ax= \begin{cases}
+-\infty & a<1 \\
++\infty & a>1 
+\end{cases} $ & 
+$ \displaystyle \lim_{x\rightarrow 0^+}\log_ax= \begin{cases}
+-\infty & a>1 \\
++\infty & a<1 
+\end{cases} $ \\ [2.2ex]
+
+$ \displaystyle\lim_{x\rightarrow0}\frac{a^x-1}{x}=ln(a) ~~ \forall a>0 $ &
+ $ \displaystyle \lim_{x\rightarrow0}\frac{e^x-1}{x}=1 $ \\[2ex]
+
+$ \displaystyle
+\lim_{x\rightarrow+\infty}\frac{x^\alpha}{e^x}=0 $ &
+$ \displaystyle \lim_{x\rightarrow-\infty}\frac{e^x}{\left|x\right|^\alpha}=0 ~~~~ a>1 $ \\ [2ex]
+
+$ \displaystyle
+\lim_{x\rightarrow+\infty}\frac{\ln(x)}{x^\alpha}=0 $ &
+$ \displaystyle \lim_{x\rightarrow 0^+}\ln(x)x^\alpha=0 ~~~~ a>0 $ \\ [2ex]
+
+
+$ \displaystyle \lim_{x\rightarrow+\infty}\left(1+\frac{1}{x}\right)^x=e $ & 
+$ \displaystyle \lim_{x\rightarrow+\infty}\left(1-\frac{1}{x}\right)^x=\frac{1}{e} $ \\ [2ex]
+
+$ \displaystyle \lim_{x\rightarrow+\infty}\left(\frac{x}{x+k}\right)^x=\frac{1}{e^k} $ & 
+$ \displaystyle \lim_{x\rightarrow+\infty}\left(\frac{x}{ \sqrt[x]{x!} }\right)=e $ \\ [2ex]
+
+$ \displaystyle \lim_{x\rightarrow0}(1+x)^{1/x}={\rm e} $ &
+$ \displaystyle \lim_{x\rightarrow+\infty}\left(1+\frac{n}{x}\right)^{mx}={\rm e}^{mn} $ \\ [2ex]
+
+$ \displaystyle \lim_{x\rightarrow\infty}\frac{x^p}{a^x}=0~~\mbox{als }|a|>1 $ &
+$ \displaystyle \lim_{x\rightarrow0}\frac{(1+x)^\alpha-1}{x}=\alpha ~~~ (a\in\mathbb{R}) $ \\ [2ex]
+
+$ \displaystyle \lim_{x\rightarrow0}\left(a^{1/x}-1\right)=\ln(a) $ &
+$ \displaystyle \lim_{x\rightarrow\infty}\sqrt[x]{x}=1 $ \\ [2ex]
 
 \end{tabularx}
-
-
-
-$ \displaystyle
-\lim_{x\rightarrow0}\frac{a^x-1}{x}=ln(a) ~~ \forall a>0 ~~,~~ \lim_{x\rightarrow0}\frac{e^x-1}{x}=1
-$
-
-$ \displaystyle
-\lim_{x\rightarrow+\infty}\log_ax=+\infty ~~,~~ \lim_{x\rightarrow0^+}\log_ax=-\infty ~~~~ a>1
-$
-
-$ \displaystyle
-\lim_{x\rightarrow+\infty}\log_ax=-\infty ~~,~~ \lim_{x\rightarrow0^+}\log_ax=+\infty ~~~~ a<1
-$
-
-$ \displaystyle
-\lim_{x\rightarrow+\infty}\frac{x^\alpha}{e^x}=0 ~~,~~ \lim_{x\rightarrow-\infty}\frac{e^x}{\left|x\right|^\alpha}=0 ~~~~ a>1
-$
-
-$ \displaystyle
-\lim_{x\rightarrow+\infty}\frac{\ln(x)}{x^\alpha}=0 ~~,~~ \lim_{x\rightarrow 0^+}\ln(x)x^\alpha=0 ~~~~ a>0
-$
-
-
-$ \displaystyle \lim_{x\rightarrow+\infty}\left(1+\frac{1}{x}\right)^x=e $ \ \ , \ \ 
-$ \displaystyle \lim_{x\rightarrow+\infty}\left(1-\frac{1}{x}\right)^x=\frac{1}{e} $
-
-$ \displaystyle \lim_{x\rightarrow+\infty}\left(\frac{x}{x+k}\right)^x=\frac{1}{e^k} $ \ \ , \ \ 
-$ \displaystyle \lim_{x\rightarrow+\infty}\left(\frac{x}{ \sqrt[x]{x!} }\right)=e $
-
-$ \displaystyle
-\lim_{x\rightarrow0}(1+x)^{1/x}={\rm e}~~,~~
-\lim_{x\rightarrow+\infty}\left(1+\frac{n}{x}\right)^{mx}={\rm e}^{mn}
-$
-
-$ \displaystyle
-\lim_{x\rightarrow\infty}\frac{x^p}{a^x}=0~~\mbox{als }|a|>1 ~~,~~
-\lim_{x\rightarrow0}\frac{(1+x)^\alpha-1}{x}=\alpha ~~~ (a\in\mathbb{R})
-$
-
-$ \displaystyle
-\lim_{x\rightarrow0}\left(a^{1/x}-1\right)=\ln(a)~~,~~
-\lim_{x\rightarrow\infty}\sqrt[x]{x}=1
-$
 
 \section{Series}
 \textbf{Definition:} In mathematics, a series is, roughly speaking, a description of the operation of adding infinitely many quantities, one after the other, to a given starting quantity.
