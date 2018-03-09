@@ -8,7 +8,44 @@ These two branches are related to each other by the fundamental theorem of calcu
 
 
 \section{Limits}
+\subsection{Limits Rules}
+If $ \lim_{x \rightarrow c f(x) = L_1} $ and $ \lim_{x \rightarrow c g(x) = L_2} $ then:
 
+\begin{itemize}
+	\item $ \displaystyle \lim_{x \rightarrow c} \left[ f(x) \pm g(x) \right]f(x) = L_1 \pm L_2 $
+	\item $ \displaystyle \lim_{x \rightarrow c} \left[ f(x) \cdot g(x) \right]f(x) = L_1 \cdot L_2 $
+	\item $ \displaystyle \lim_{x \rightarrow c} \frac{f(x)}{g(x)} = \frac{L_1}{L_2} $ \ \ \ \  if $L_2 \ne 0$
+	\item $ \displaystyle \lim_{x \rightarrow c} f(x)^n = L_1^n $ \ \ \ \  if $n$ is a positive integer
+	\item $ \displaystyle \lim_{x \rightarrow c} f(x)^{\frac{1}{n}} = L_1^{\frac{1}{n}} $ \ \ \ \  if $n$ is a positive integer, and, if $n$ is even, then $L_1>0$
+	\item $ \displaystyle \lim_{x \rightarrow c} \frac{f(x)}{g(x)} = \lim_{x \rightarrow c} \frac{f^\prime(x)}{g^\prime(x)}$ \ \ \ \ if $ \lim_{x \rightarrow c } f(x) = \lim_{x \rightarrow c } g(x) = L $ \ \ (L'Hôpital's rule)
+\end{itemize}
+
+\subsubsection{Substitution rule}
+ $ \displaystyle 
+\text{Given  } \lim_{x\rightarrow c}f(x)=l \text{   then   } \lim_{x\rightarrow c}g(f(x))=\lim_{y\rightarrow l}g(y) 
+$
+
+\subsection{Common Limits}
+\subsubsection{Simple functions}
+ $ \displaystyle \lim_{x \rightarrow c} a = a $
+
+ $ \displaystyle \lim_{x \rightarrow c} x = c $
+
+ $ \displaystyle \lim_{x \rightarrow c} ax + b = ac+b $
+
+ $ \displaystyle \lim_{x \rightarrow c} x^r = c^r $ \ \ \ if $r$ is a positive integer
+
+ $ \displaystyle \lim_{x \rightarrow c} ax + b = ac+b $ 
+
+ $ \displaystyle \lim_{x \rightarrow 0^+} \frac{1}{x^r} = +\infty $
+ 
+ $ \displaystyle \lim_{x \rightarrow 0^-} \frac{1}{x^r} = \begin{cases}
+															 -\infty & \text{ if $r$ is odd } \\
+															 +\infty & \text{ if $r$ is even }
+															 \end{cases}
+ $
+
+\subsubsection{Polynomial Limits}
 $ \displaystyle \lim_{x\rightarrow\pm\infty}P(x)=\lim_{x\rightarrow\pm\infty}a_nx^x=\pm\infty $
 
 $ \displaystyle \lim_{x\rightarrow\pm\infty}\frac{P(x)}{Q(x)}=\lim_{x\rightarrow\pm\infty}\frac{a_nx^x}{b_mx^m}=\lim_{x\rightarrow\pm\infty}\frac{a_n}{b_m}x^{n-m}=
@@ -18,37 +55,40 @@ $ \displaystyle \lim_{x\rightarrow\pm\infty}\frac{P(x)}{Q(x)}=\lim_{x\rightarrow
 0 & \text{if } n<m \\
 \end{cases} $
 
-$ \displaystyle
-\lim_{x\rightarrow0}\frac{\sin(x)}{x}=1 ~~,~~ \lim_{x\rightarrow0}\frac{1-\cos(x)}{x^2}=\frac{1}{2}
-$
+\subsubsection{Trigonometric functions limits}
+\begin{tabular}{ l l }
+$ \displaystyle \lim_{x\rightarrow0}\frac{\sin(x)}{x}=1 $ &
+$ \displaystyle \lim_{x\rightarrow0}\frac{1-\cos(x)}{x^2}=\frac{1}{2} $ \\ [1.7ex]
+$ \displaystyle \lim_{x\rightarrow0}\frac{\tan(x)}{x}=1 $ &
+$ \displaystyle  \lim_{x\rightarrow0}\frac{\arcsin(x)}{x}=1 $ 
+\end{tabular}
+
+\subsubsection{Logarithmic and exponential functions}
+\begin{tabularx}{\textwidth}{ X X }
+$ \displaystyle \lim_{x\rightarrow0}\frac{\ln(x+a)}{x}=a $ &
+$ \displaystyle \lim_{x\rightarrow0}\frac{\log_a(x+1)}{x}=\frac{1}{\ln(a)} ~~ (a>0) $ \\ [1.7ex]
+
+$ \displaystyle \lim_{x\rightarrow+\infty}x^\alpha=+\infty ~~ \alpha>0 $ &
+$ \displaystyle \lim_{x\rightarrow0^+}x^\alpha=0 ~~ \alpha>0 $ \\ [1.7ex]
+
+$ \displaystyle \lim_{x\rightarrow+\infty}x^\alpha=0 \alpha<0 $ & 
+$ \displaystyle \lim_{x\rightarrow0^+}x^\alpha=+\infty ~~ \alpha<0 $ \\ [1.7ex]
+
+$ \displaystyle \lim_{x\rightarrow+\infty}a^x= \begin{cases}
++\infty & a>1 \\
+0 & a<1
+\end{cases} $ & 
+$ \displaystyle \lim_{x\rightarrow-\infty}a^x= \begin{cases}
++\infty & a<1 \\
+0 & a>1
+\end{cases} $ \\ [1.7ex]
+
+\end{tabularx}
+
+
 
 $ \displaystyle
-\lim_{x\rightarrow0}\frac{\tan(x)}{x}=1 ~~,~~ \lim_{x\rightarrow0}\frac{\arcsin(x)}{x}=1
-$
-
-$ \displaystyle
-\lim_{x\rightarrow0}\frac{\log_a(x+1)}{x}=\frac{1}{\ln(a)} ~~ (a>0) ~~,~~
-\lim_{x\rightarrow0}\frac{\ln(x+a)}{x}=a
-$
-
-$ \displaystyle
-\lim_{x\rightarrow+\infty}x^\alpha=+\infty ~~,~~ \lim_{x\rightarrow0^+}x^\alpha=0 ~~~~ \alpha>0
-$
-
-$ \displaystyle
-\lim_{x\rightarrow+\infty}x^\alpha=0 ~~,~~ \lim_{x\rightarrow0^+}x^\alpha=+\infty ~~~~ \alpha<0
-$
-
-$ \displaystyle
-\lim_{x\rightarrow0}\frac{a^x-1}{x}=ln(a) ~~,~~ \lim_{x\rightarrow0}\frac{e^x-1}{x}=1
-$
-
-$ \displaystyle
-\lim_{x\rightarrow+\infty}a^x=+\infty ~~,~~ \lim_{x\rightarrow-\infty}a^x=0 ~~~~ a>1
-$
-
-$ \displaystyle
-\lim_{x\rightarrow+\infty}a^x=0 ~~,~~ \lim_{x\rightarrow-\infty}a^x=+\infty ~~~~ a<1
+\lim_{x\rightarrow0}\frac{a^x-1}{x}=ln(a) ~~ \forall a>0 ~~,~~ \lim_{x\rightarrow0}\frac{e^x-1}{x}=1
 $
 
 $ \displaystyle
@@ -68,9 +108,15 @@ $ \displaystyle
 $
 
 
+$ \displaystyle \lim_{x\rightarrow+\infty}\left(1+\frac{1}{x}\right)^x=e $ \ \ , \ \ 
+$ \displaystyle \lim_{x\rightarrow+\infty}\left(1-\frac{1}{x}\right)^x=\frac{1}{e} $
+
+$ \displaystyle \lim_{x\rightarrow+\infty}\left(\frac{x}{x+k}\right)^x=\frac{1}{e^k} $ \ \ , \ \ 
+$ \displaystyle \lim_{x\rightarrow+\infty}\left(\frac{x}{ \sqrt[x]{x!} }\right)=e $
+
 $ \displaystyle
 \lim_{x\rightarrow0}(1+x)^{1/x}={\rm e}~~,~~
-\lim_{x\rightarrow\infty}\left(1+\frac{n}{x}\right)^x={\rm e}^n
+\lim_{x\rightarrow+\infty}\left(1+\frac{n}{x}\right)^{mx}={\rm e}^{mn}
 $
 
 $ \displaystyle
@@ -82,11 +128,6 @@ $ \displaystyle
 \lim_{x\rightarrow0}\left(a^{1/x}-1\right)=\ln(a)~~,~~
 \lim_{x\rightarrow\infty}\sqrt[x]{x}=1
 $
-
-\subsubsection{Substitution rule}
-\[
-\text{given  } \lim_{x\rightarrow c}f(x)=l \text{   then   } \lim_{x\rightarrow c}g(f(x))=\lim_{y\rightarrow l}g(y) 
-\]
 
 \section{Series}
 \textbf{Definition:} In mathematics, a series is, roughly speaking, a description of the operation of adding infinitely many quantities, one after the other, to a given starting quantity.
