@@ -281,6 +281,65 @@ $ \displaystyle  f(x)=\ln(g(x)) ~ \Rightarrow ~ f^\prime(x)= \frac{g^\prime(x)}{
 \end{tabular}
 
 
+\section{Taylor Series}
+A Taylor series is a representation of a function as an infinite sum of terms that are calculated from the values of the function's derivatives at a single point.
+
+\textbf{Taylor's Theorem:}
+Let $k \ge 1$ be an integer and let the function $f : \mathbb{R} \rightarrow \mathbb{R}$ be $k$ times differentiable at the point $a \in R$. Then there exists a function $h_k : \mathbb{R} \rightarrow \mathbb{R}$ such that
+\[
+f(x) = f(a) + f^{\prime}(a)(x-a) + \frac{f^{\prime\prime}(a)}{2!}(x-a)^2 + ... + \frac{f^{k}(a)}{k!}(x-a)^k + h_k ( x ) (x-a)^k
+\]
+and $\lim_{x \rightarrow a} h_k ( x ) = 0$. This is called the Peano form of the remainder.
+
+
+The Taylor series of a real or complex-valued function $f(x)$ that is infinitely differentiable at a real or complex number $a$ is the power series:
+\[
+\sum_{n=0}^{+\infty}\frac{f^{(n)}(a)}{n!}(x-a)^n
+\]
+
+\textbf{Maclaurin series:}
+When $a = 0$, the series is also called a Maclaurin series.
+
+\textbf{Even/Odd functions and Maclaurin Polynomials:}
+\begin{itemize}
+	\item If $f$ be an even function, then each of $f$'s Maclaurin polynomials contains only even powers;
+	\item If $f$ be an odd function, then each of $f$'s Maclaurin polynomials contains only odd powers.
+\end{itemize}
+
+\subsection{Maclaurin series of common functions}
+
+\subsubsection{Exponential function}
+$\displaystyle e^x = \sum_{n=0}^{+\infty}\frac{x^n}{n!} = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + ...$ \ \ \ \ It converges for all $x$.
+
+\subsubsection{Logarithm functions}
+$\displaystyle \ln(1-x) = -\sum_{n=1}^{+\infty}\frac{x^n}{n} = - x - \frac{x^2}{2} - \frac{x^3}{3} + ...$ \ \ \ \ It converges for $\left|x\right|<1$.
+
+$\displaystyle \ln(1+x) = \sum_{n=1}^{+\infty}(-1)^{n+1}\frac{x^n}{n} = x - \frac{x^2}{2} + \frac{x^3}{3} + ...$ \ \ \ \ It converges for $\left|x\right|<1$.
+
+\subsubsection{Geometric Series}
+$\displaystyle \frac{1}{1-x} = \sum_{n=0}^{+\infty}x^n $ \ \ \ \ It converges for $\left|x\right|<1$.
+
+$\displaystyle \frac{1}{(1-x)^2} = \sum_{n=1}^{+\infty}nx^{n-1} $ \ \ \ \ It converges for $\left|x\right|<1$.
+
+$\displaystyle \frac{1}{(1-x)^3} = \sum_{n=2}^{+\infty} \frac{(n-1)n}{2} x^{n-2} $ \ \ \ \ It converges for $\left|x\right|<1$.
+
+\subsubsection{Binomial Series}
+$\displaystyle (1-x)^\alpha = \sum_{n=0}^{+\infty} \binom{\alpha}{n} x^n $ \ \ It converges for $\left|x\right|<1$ for any real or complex number $\alpha$.
+
+\subsubsection{Trigonometric functions}
+\begin{align*}
+	\sin(x) &= \sum_{n=0}^{\infty} \frac{(-1)^n}{(2n+1)!}x^{2n+1} &= x - \frac{x^3}{6} + \frac{x^5}{120} - ... ~~~~~~ & \forall x & \\
+	\cos(x) &= \sum_{n=0}^{\infty} \frac{(-1)^n}{(2n)!}x^{2n} &= 1 - \frac{x^2}{2} + \frac{x^4}{24} - ... ~~~~~~ & \forall x &\\
+	\tan(x) &= \sum_{n=1}^{\infty} \frac{B_{2n}(-4)^n (1-4^n) }{(2n)!}x^{2n-1} &= x + \frac{x^3}{3} + \frac{2x^5}{15} + ... ~~~~~~ & \text{for } |x|<\frac{\pi}{2} &\\
+\end{align*}
+
+\subsubsection{Hyperbolic functions}
+\begin{align*}
+\sinh(x) &= \sum_{n=0}^{\infty} \frac{x^{2n+1}}{(2n+1)!} &= x + \frac{x^3}{3!} + \frac{x^5}{5!} + ... ~~~~~~ & \forall x & \\
+\cosh(x) &= \sum_{n=0}^{\infty} \frac{x^{2n}}{(2n)!} &= 1 + \frac{x^2}{2!} + \frac{x^4}{4!} + ... ~~~~~~ & \forall x & \\
+\tanh(x) &= \sum_{n=1}^{\infty} \frac{B_{2n} 4^n (4^n-1) }{(2n)!}x^{2n-1} &= x - \frac{x^3}{3} + \frac{2x^5}{15} - \frac{17x^7}{315} + ... ~~~~~~ & \text{for } |x|<\frac{\pi}{2} & \\
+\end{align*}
+
 \section{Integral Calculus}
 \textbf{Definition:} In mathematics, Integral calculus is a subfield of calculus in which the notion of an integral, its properties and methods of calculation are studied. It concerns accumulation of quantities and the areas under and between curves.
 
