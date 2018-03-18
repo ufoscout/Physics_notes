@@ -231,15 +231,47 @@ Quotient rule: & $ \displaystyle \left( \frac{f(x)}{g(x)} \right)^\prime = \frac
 Chain rule:    & $ \displaystyle f\left( g(x) \right) ^\prime = f^\prime\left( g(x) \right) \cdot g^\prime(x) $
 \end{tabular}
 
+\subsection{Derivative test}
 
-\subsection{Second derivative test}
+\subsubsection{Second derivative test}
+If the function $f$ is twice differentiable at a critical point $x_0$ (i.e. $f^\prime(x_0) = 0$), then:
+\begin{itemize}
+\item If $ f^{\prime \prime }(x_0)<0 $ then $f$  has a local maximum at $x_0$.
+\item If $ f^{\prime \prime }(x_0)>0 $ then $f$  has a local minimum at $x_0$.
+\item If $ f^{\prime \prime }(x_0)=0 $ the test is inconclusive.
+\end{itemize}
 
-If $ f^\prime(x_0) = 0 $ then $ \begin{cases}
-									f^{\prime\prime}(x_0) > 0 & \text{local minimum} \\
-									f^{\prime\prime}(x_0) < 0 & \text{local maximum} \\
-									f^{\prime\prime}(x_0) = 0 & \text{undetermined}
-								\end{cases}
-$
+\subsubsection{Concavity test}
+A twice-differentiable function $f$ is concave up if $ f^{\prime \prime }(x_0)>0 $ and concave down if $ f^{\prime \prime }(x_0)<0 $.
+
+\subsubsection{Higher order derivative test}
+Let $f$ be a real-valued function $n$-times ($n\ge2$) differentiable at a point $x_0$ with
+\[
+f^\prime(x_0) = ... = f^{(n)}(x_0) = 0 ~~~, ~~~ f^{(n+1)}(x_0) \ne 0
+\]
+then
+\begin{itemize}
+	\item If $n$ is odd and  $ f^{(n+1)}(x_0)<0 $ then $f$ has a local maximum at $x_0$.
+	\item If $n$ is odd and  $ f^{(n+1)}(x_0)>0 $ then $f$ has a local minimum at $x_0$.
+	\item If $n$ is even and  $ f^{(n+1)}(x_0)<0 $ then $x_0$ is a strictly decreasing point of inflection.
+	\item If $n$ is even and  $ f^{(n+1)}(x_0)>0 $ then $x_0$ is a strictly increasing point of inflection.
+\end{itemize}
+
+\medskip
+In addition, when $x_0$ is not a critical point, we have:
+
+Let $f$ be a real-valued function $n$-times ($n\ge3$) differentiable at a point $x_0$ with
+\[
+f^\prime(x_0)\ne0 ~~~, ~~~ f^{\prime\prime}(x_0) = ... = f^{(n)}(x_0) = 0 ~~~, ~~~ f^{(n+1)}(x_0) \ne 0
+\]
+then
+\begin{itemize}
+	\item If $n$ is odd then $x_0$ is not an inflection point.
+	\item If $n$ is even and  $ f^{(n+1)}(x_0)<0 $ then $x_0$ is a strictly decreasing point of inflection.
+	\item If $n$ is even and  $ f^{(n+1)}(x_0)>0 $ then $x_0$ is a strictly increasing point of inflection.
+\end{itemize}
+
+
 
 \subsection{Common derivatives}
 \subsubsection{Basic Derivatives}
@@ -308,15 +340,18 @@ When $a = 0$, the series is also called a Maclaurin series.
 
 \subsection{Maclaurin series of common functions}
 
-\subsubsection{Exponential function}
-$\displaystyle e^x = \sum_{n=0}^{+\infty}\frac{x^n}{n!} = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + ...$ \ \ \ \ It converges for all $x$.
+\subsubsection{Basic functions}
+$\displaystyle \sqrt{1+x} = 1 + \frac{1}{2}x - \frac{1}{8}x^2 + \frac{1}{16}x^3 + o(x^3)$ 
+
+\subsubsection{Exponential functions}
+$\displaystyle e^x = \sum_{n=0}^{+\infty}\frac{x^n}{n!} = 1 + x + \frac{x^2}{2!} + ... + \frac{x^n}{n!} + o(x^n) $ \ \ \ \ It converges for all $x$
 
 \subsubsection{Logarithm functions}
-$\displaystyle \ln(1-x) = -\sum_{n=1}^{+\infty}\frac{x^n}{n} = - x - \frac{x^2}{2} - \frac{x^3}{3} + ...$ \ \ \ \ It converges for $\left|x\right|<1$.
-
-$\displaystyle \ln(1+x) = \sum_{n=1}^{+\infty}(-1)^{n+1}\frac{x^n}{n} = x - \frac{x^2}{2} + \frac{x^3}{3} + ...$ \ \ \ \ It converges for $\left|x\right|<1$.
+$\displaystyle \ln(1+x) = \sum_{n=1}^{+\infty}(-1)^{n+1}\frac{x^n}{n} = x - \frac{x^2}{2} + ... + (-1)^{n+1}\frac{x^n}{n} + o(x^n) $ \ \ \ It conv. for $\left|x\right|<1$
 
 \subsubsection{Geometric Series}
+$\displaystyle \frac{1}{1+x} = \sum_{n=0}^{+\infty}(-1)^n x^n = 1 - x + x^2 ... + (-1)^n x^n + o(x^n)$ 
+
 $\displaystyle \frac{1}{1-x} = \sum_{n=0}^{+\infty}x^n $ \ \ \ \ It converges for $\left|x\right|<1$.
 
 $\displaystyle \frac{1}{(1-x)^2} = \sum_{n=1}^{+\infty}nx^{n-1} $ \ \ \ \ It converges for $\left|x\right|<1$.
@@ -324,7 +359,7 @@ $\displaystyle \frac{1}{(1-x)^2} = \sum_{n=1}^{+\infty}nx^{n-1} $ \ \ \ \ It con
 $\displaystyle \frac{1}{(1-x)^3} = \sum_{n=2}^{+\infty} \frac{(n-1)n}{2} x^{n-2} $ \ \ \ \ It converges for $\left|x\right|<1$.
 
 \subsubsection{Binomial Series}
-$\displaystyle (1-x)^\alpha = \sum_{n=0}^{+\infty} \binom{\alpha}{n} x^n $ \ \ It converges for $\left|x\right|<1$ for any real or complex number $\alpha$.
+$\displaystyle (1+x)^\alpha = \sum_{n=0}^{+\infty} \binom{\alpha}{n} x^n $ \ \ It converges for $\left|x\right|<1$ for any real or complex number $\alpha$.
 
 \subsubsection{Trigonometric functions}
 \begin{align*}
