@@ -216,6 +216,49 @@ $ \displaystyle \sum_{k=1}^n k^3 = \frac{n^2(n+1)^2}{4} $
 s_n=\sum_{k=2}^{n}\frac{1}{(k-1)k}=1-\frac{1}{n} ~~ \text{ then } ~~  \lim_{n\rightarrow\infty}s_n=1
 \]
 
+\section{Landau Symbols}
+\subsection{Big-O notation}
+The Big-O provides a function that is at most the same order as that of a given function.
+
+If $\exists M>0$ such that $\displaystyle \lim_{x\rightarrow c} \left| \frac{f(x)}{g(x)} \right| < M $ then we say "as $x\rightarrow c, f(x)=O(g(x))$"
+
+\subsection{Little-O notation}
+The little-o provides a function that is of lower order of magnitude than a given function.
+
+If $\displaystyle \lim_{x\rightarrow c} \frac{f(x)}{g(x)} = 0 $ then we say "as $x\rightarrow c, f(x)=o(g(x))$"
+
+
+
+\section{Asymptotes}
+In analytic geometry, an asymptote of a curve is a line such that the distance between the curve and the line approaches zero as one or both of the x or y coordinates tends to infinity.
+
+\subsection{Vertical asymptotes}
+The line $x = a$ is a vertical asymptote of the graph of the function $y = f(x)$ if:
+
+ $\displaystyle \lim_{x\rightarrow a^-} f(x) = \pm \infty $ or 
+ $\displaystyle \lim_{x\rightarrow a^+} f(x) = \pm \infty $
+
+
+\subsection{Horizontal asymptotes}
+The horizontal line $y = c$ is a horizontal asymptote of the function $y = f(x)$ if:
+
+ $\displaystyle \lim_{x\rightarrow -\infty} f(x) = c $ or 
+ $\displaystyle \lim_{x\rightarrow + \infty} f(x) = c $
+ 
+\subsection{Oblique asymptotes}
+A function $f(x)$ is asymptotic to the straight line $y = mx + n (m \ne 0)$ if:
+
+$\displaystyle \lim_{x\rightarrow +\infty} \left[ f(x) - (mx+n) \right] = 0 $ or 
+$\displaystyle \lim_{x\rightarrow -\infty} \left[ f(x) - (mx+n) \right] = 0 $
+
+Using the Landau symbols, the formula becomes:
+
+$\displaystyle  f(x) = mx + n + 0(1), x\rightarrow +\infty$ 
+
+From the last one, it is easy to find that:
+
+$\displaystyle m=\lim_{x\rightarrow +\infty} \frac{f(x)}{x} $  and $\displaystyle q=\lim_{x\rightarrow +\infty} (f(x) - mx) $
+
 \section{Derivatives}
 The derivative of a function is the ratio of the difference of function value $ f(x) $ at points $ x+\Delta x $ and $ x $ with $ \Delta x $, when $ \Delta x $ is infinitesimally small. The derivative is the function slope or slope of the tangent line at point x.
 
