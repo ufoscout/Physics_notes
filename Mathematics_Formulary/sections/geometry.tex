@@ -225,3 +225,51 @@ $ \displaystyle \tan(\alpha) = \frac{2t}{1-t^2} \text{ where } t=\tan\left(\frac
      $360^{\circ}$     & $2\pi$   & 0       &  1     & 0   & $\pm\infty$       \\
      \hline
 \end{tabular}
+
+
+\section{Polar, Cylindrical and Spherical Coordinates}
+\subsection{Polar Coordinates}
+The polar coordinate system is a two-dimensional coordinate system in which each point on a plane is determined by a distance from a reference point and an angle from a reference direction.
+
+The polar coordinates $r$ and $\varphi$ can be converted to the Cartesian coordinates $x$ and $y$ by:
+\[
+x=r\cos \varphi  ~~~, ~~~ y=r\sin \varphi
+\]
+
+The Cartesian coordinates $x$ and $y$ can be converted to polar coordinates $r$ and $\varphi$ with $r \ge 0$ and $\varphi$ in the interval $(-\pi, \pi]$ by:
+
+$ \displaystyle r= \sqrt{ x^2 + y^2 } $
+
+$ \displaystyle \varphi = atan2(y,x) = 
+\begin{cases}
+\arctan(y/x) & \text{ if } x>0 \\
+\arctan(y/x) + \pi & \text{ if } x<0 \text{ and } y\ge0\\
+\arctan(y/x) - \pi & \text{ if } x<0 \text{ and } y<0\\
+\pi/2 & \text{ if } x=0 \text{ and } y>0\\
+-\pi/2 & \text{ if } x=0 \text{ and } y<0\\
+\text{undefined} & \text{ if } x=0 \text{ and } y=0\\
+\end{cases}
+$
+
+
+
+\subsection{Cylindrical Coordinates}
+A cylindrical coordinate system is a three-dimensional coordinate system that specifies point positions by the distance from a chosen reference axis, the direction from the axis relative to a chosen reference direction, and the distance from a chosen reference plane perpendicular to the axis. The latter distance is given as a positive or negative number depending on which side of the reference plane faces the point.
+
+For the conversion between cylindrical and Cartesian coordinates, it is convenient to assume that the reference plane of the former is the Cartesian $xy$-plane (with equation $z = 0$), and the cylindrical axis is the Cartesian $z$-axis. Then the $z$-coordinate is the same in both systems, and the correspondence between cylindrical (radius $\rho$, azimuth $\varphi$, elevation $\zeta$) and Cartesian are the same as for polar coordinates, namely
+\[
+x=\rho \cos \varphi  ~~~, ~~~ y=\rho \sin \varphi ~~~, ~~~ z=\zeta
+\]
+
+\subsection{Spherical Coordinates}
+In mathematics, a spherical coordinate system is a coordinate system for three-dimensional space where the position of a point is specified by three numbers: the radial distance of that point from a fixed origin, its polar angle measured from a fixed zenith direction, and the azimuth angle of its orthogonal projection on a reference plane that passes through the origin and is orthogonal to the zenith, measured from a fixed reference direction on that plane.
+
+The spherical coordinates of a point in the ISO convention (i.e. for physics: radius $r$, inclination $\theta$, azimuth $\varphi$) can be obtained from its Cartesian coordinates $(x, y, z)$ by the formulae:
+\[
+r=\sqrt{x^2+y^2+z^2} ~~,~~ \theta=\arccos\frac{z}{r} ~~,~~ \varphi = \arctan\frac{y}{x}
+\]
+
+Conversely, the Cartesian coordinates may be retrieved from the spherical coordinates (where $r \in [0, +\infty), \theta \in [0, \pi], \varphi \in [0, 2\pi)$), by:
+\[
+x=r\sin\theta\cos\varphi ~~,~~ y=r\sin\theta\sin\varphi ~~,~~ z=r\cos\theta
+\]

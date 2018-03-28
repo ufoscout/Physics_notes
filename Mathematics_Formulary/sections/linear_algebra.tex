@@ -1,6 +1,54 @@
 \chapter{Linear Algebra}
 \textbf{Definition:} Linear algebra is the branch of mathematics concerning linear equations and their representations through matrices and vector spaces. Linear algebra is central to almost all areas of mathematics.
 
+\section{Vectors}
+
+\subsection{Magnitude and direction}
+The \textbf{magnitude} of a vector $v=\vec{PQ}$ is the distance between the initial point P and the end point Q. In symbols the magnitude of $\vec{PQ}$ is written as $\Vert\vec{PQ}\Vert$:
+
+\[
+\Vert \vec{PQ} \Vert = \sqrt{ \sum_{i=1}^{d} (q_i - p_i)^2}
+\]
+
+
+If the point P is the origin, then the magnitude of $v$ is:
+\[
+\Vert v \Vert = \sqrt{ \sum_{i=1}^{d} v_i^2 }
+\]
+
+
+The \textbf{direction} of a vector is the measure of the angle it makes with a horizontal line.
+In $\mathbb{R}^2$ the direction of $\vec{PQ}$ with $P=(x_1,y_1)$ and $Q=(x_2,y_2)$ can be calculated with:
+\[
+\theta = \arctan \left( \frac{y_2-y_1}{x_2-x_1} \right)
+\]
+
+More generically, the angle between two vectors $\mathbf{a}$ and $\mathbf{b}$ can be calculated from the dot product formula:
+\[
+\cos(\theta) = \frac{ \mathbf{a} \cdot \mathbf{b} }{ \Vert \mathbf{a} \Vert  \Vert \mathbf{b} \Vert }
+\]
+
+
+\subsection{Dot product or Scalar product}
+The dot product of two vectors $\mathbf{a} = [a_1, a_2, ..., a_n]$ and $\mathbf{b} = [b_1, b_2, ..., b_n]$ is defined as:
+
+\[
+\mathbf{a} \cdot \mathbf{b} = \sum_{i=1}^{n}a_i b_i = a_1 b_1 + a_2 b_2 + ... + a_n b_n
+\]
+
+The dot product can also be written as:
+
+\[ \mathbf{a} \cdot \mathbf{b} =\mathbf{a} ^{T}\mathbf {b} \] 
+
+Here, $\displaystyle \mathbf {a} ^{T}$ means the transpose of a $\displaystyle \mathbf {a} $.
+
+Finally, the dot product of two Euclidean vectors  $\mathbf{a}$ and $\mathbf{b}$ is defined by:
+\[ 
+\mathbf{a} \cdot \mathbf{b} = \Vert \mathbf{a} \Vert  \Vert \mathbf{b} \Vert \cos(\theta)
+\] 
+
+where $\theta$ is the angle between $\mathbf{a}$ and $\mathbf{b}$.
+
 \section{Vector spaces}
 $\cal G$ is a group for the operation $\otimes$ if:
 \begin{enumerate}
@@ -620,55 +668,3 @@ There are two solution strategies for the equation $\ddot{\vec{x}}=A\vec{x}$:
 	$\ddot{y}=\dot{v}$. This transforms a $n$-dimensional set of second order
 	equations into a $2n$-dimensional set of first order equations. 
 \end{enumerate}
-
-\section{Quadratic forms}
-\subsection{Quadratic forms in $ \mathbb{R}^2$}
-The general equation of a quadratic form is:
-$\vec{x}^TA\vec{x}+2\vec{x}^TP+S=0$. Here, $A$ is a symmetric matrix.
-If $\Lambda=S^{-1}AS={\rm diag}(\lambda_1,...,\lambda_n)$ holds:
-$\vec{u}^T\Lambda\vec{u}+2\vec{u}^TP+S=0$, so all cross terms are 0.
-$\vec{u}=(u,v,w)$ should be chosen so that det$(S)=+1$,
-to maintain the same orientation as the system $(x,y,z)$.
- 
-Starting with the equation
-\[
-ax^2+2bxy+cy^2+dx+ey+f=0
-\]
-we have $|A|=ac-b^2$. An ellipse has $|A|>0$, a parabola $|A|=0$ and
-a hyperbole $|A|<0$. In polar coordinates this can be written as:
-\[
-r=\frac{ep}{1-e\cos(\theta)}
-\]
-An ellipse has $e<1$, a parabola $e=1$ and a hyperbole $e>1$.
-
-\subsection{Quadratic surfaces in $ \mathbb{R}^3$}
-Rank 3:
-\[
-p\frac{x^2}{a^2}+q\frac{y^2}{b^2}+r\frac{z^2}{c^2}=d
-\]
-\begin{itemize}
-	\item Ellipsoid: $p=q=r=d=1$, $a,b,c$ are the lengths of the semi axes.
-	\item Single-bladed hyperboloid: $p=q=d=1$, $r=-1$.
-	\item Double-bladed hyperboloid: $r=d=1$, $p=q=-1$.
-	\item Cone: $p=q=1$, $r=-1$, $d=0$.
-\end{itemize}
-Rank 2:
-\[
-p\frac{x^2}{a^2}+q\frac{y^2}{b^2}+r\frac{z}{c^2}=d
-\]
-\begin{itemize}
-	\item Elliptic paraboloid: $p=q=1$, $r=-1$, $d=0$.
-	\item Hyperbolic paraboloid: $p=r=-1$, $q=1$, $d=0$.
-	\item Elliptic cylinder: $p=q=-1$, $r=d=0$.
-	\item Hyperbolic cylinder: $p=d=1$, $q=-1$, $r=0$.
-	\item Pair of planes: $p=1$, $q=-1$, $d=0$.
-\end{itemize}
-Rank 1:
-\[
-py^2+qx=d
-\]
-\begin{itemize}
-	\item Parabolic cylinder: $p,q>0$.
-	\item Parallel pair of planes: $d>0$, $q=0$, $p\neq 0$.
-	\item Double plane: $p\neq 0$, $q=d=0$.
-\end{itemize}
