@@ -421,6 +421,60 @@ $\displaystyle (1+x)^\alpha = \sum_{n=0}^{+\infty} \binom{\alpha}{n} x^n $ \ \ I
 \section{Integral Calculus}
 \textbf{Definition:} In mathematics, Integral calculus is a subfield of calculus in which the notion of an integral, its properties and methods of calculation are studied. It concerns accumulation of quantities and the areas under and between curves.
 
+\subsection{Integration rules}
+\begin{tabular}{ l l }
+	Multiplication by a constant:      & $ \displaystyle \int c f(x)dx = c \int f(x)dx  $  \\
+	Sum rule:      & $ \displaystyle \int (f(x) + g(x)) dx = \int f(x)dx + \int g(x)dx $  \\
+	Integration by parts:   & $ \displaystyle \int f(x)g^\prime(x)dx = f(x)g(x) + \int f^\prime(x)g(x)dx  $  \\
+	Substitution rule: & $ \displaystyle \int f(g(x))g^\prime(x)dx = \int f(y)dy ~~,~~ y=g(x) $  \\
+	\end{tabular}
+
+
+\subsection{Integration of Rational Functions}
+A rational function $ \frac{P(x)}{Q(x)}$, where $P(x)$ and $Q(x)$ are both polynomials, can be integrated in four steps:
+\begin{enumerate}
+\item Reduce the fraction if it is improper (i.e. degree of $P(x)$ is greater than degree of $Q(x)$);
+\item Factor $Q(x)$ into linear and/or quadratic (irreducible) factors;
+\item Decompose the fraction into a sum of partial fractions;
+\item Calculate integrals of each partial fraction.
+\end{enumerate}
+
+
+\subsubsection{Step 1. Reducing an Improper Fraction}
+If the fraction is improper, divide the $P(x)$ by $Q(x)$ to obtain
+\[\frac{P(x)}{Q(x)}=F(x)+\frac{R(x)}{Q(x)}\]
+where $\frac{R(x)}{Q(x)}$ is a proper fraction.
+
+\subsubsection{Step 2. Factoring Q(x) into Linear and/or Quadratic Factors}
+Write the denominator $Q(x)$ as
+\[
+Q(x) = (x-a)^\alpha \cdot\cdot\cdot (x-b)^\beta(x^2+px+q)^\mu \cdot\cdot\cdot (x^2+rx+s)^\nu
+\]
+where quadratic functions are irreducible, i.e. do not have real roots.
+
+\subsubsection{Step 3. Decomposing the Rational Fraction into a Sum of Partial Fractions}
+Write the function as follows:
+\[\frac{R(x)}{Q(x)}= \frac{A_1}{(x-a)^{\alpha}} + \frac{A_2}{(x-a)^{\alpha-1}} + ... + \frac{A_\alpha}{(x-a)} + ... + \frac{M_1 x + N_1}{(x^2+rx+s)^{\nu}} + ... + \frac{M_\nu x + N_\nu}{(x^2+rx+s)}\]
+Then equate the coefficients of equal powers of $x$ by multiplying both sides of the latter expression by $Q(x)$ and write the system of linear equations in $A_i,B_i,M_i,N_i,...$ .
+
+\subsubsection{Step 4. Integrating partial fractions}
+Use the following formulas to evaluate integrals of partial fractions with linear and quadratic denominators:
+
+\begin{enumerate}
+	\item $\displaystyle \int \frac{A}{x-a} dx = A \ln \left| x-a \right| +C$
+
+	\item $\displaystyle \int \frac{A}{(x-a)^k} dx = \frac{A}{(1-k)(x-a)^{k-1}} +C$
+	
+	\item $\displaystyle \int \frac{1}{(x-b)^2+c^2} dx = \frac{1}{c} \arctan \frac{x-b}{c} + C$
+	
+	\item $\displaystyle \int \frac{2x-2b}{(x-b)^2+c^2} dx = \ln \left| (x-b)^2 + c^2 \right| +C$
+	
+	\item $\displaystyle \int \frac{1}{(x^2+bx+c)^n} dx = !!TODO!!$
+	
+\end{enumerate}
+
+
+\subsection{Integration of Common Functions - TODO}
 
 \section{Differential calculus}
 \textbf{Definition:} In mathematics, differential calculus is a subfield of calculus concerned with the study of the rates at which quantities change.
